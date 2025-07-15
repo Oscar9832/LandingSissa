@@ -411,6 +411,7 @@ body { /*letras de somos un ecosistema*/
 }
 -------------
 /* Sección OFRECEMOS */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -418,19 +419,20 @@ body { /*letras de somos un ecosistema*/
   position: relative;
 }
 
-.header {
+.header-seguridad {
+    
   text-align: center;
   margin-bottom: 40px;
 }
 
-.header h1 {
+.header-seguridad h1 {
   color: #666666;
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-.header h2 {
+.header-seguridad h2 {
   color: #b01a1d;
   font-size: 52px;
   font-weight: 700;
@@ -810,146 +812,270 @@ body { /*letras de somos un ecosistema*/
     width: 100px;
 }
 /* Sección MIEMBROS ACTIVOS */
-.members-section {
-    padding: 80px 0;
-    background-color: #f8f9fa;
+
+.header-miembros {
+    background: #a61919;
+    padding: 0;
     text-align: center;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    font-weight: 700;
+.header-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding-top: 24px;
+    line-height: 1;
+}
+
+.header-subtitle {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 24px;
+    line-height: 1;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
     position: relative;
 }
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #0066cc;
-    margin: 15px auto 0;
+.left-box {
+    background: #fff;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 420px;
+    min-height: 220px;
+    box-sizing: border-box;
+    padding: 36px 32px 32px 32px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.members-intro {
-    max-width: 800px;
-    margin: 0 auto 40px;
+.left-box-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 12px;
 }
 
-.members-intro p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.members-intro h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin: 10px 0 20px;
-    font-weight: 700;
-}
-
-.main-description {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-.divider {
-    width: 100px;
-    height: 2px;
-    background-color: #ddd;
-    margin: 40px auto;
-}
-
-.location-info {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.country {
-    font-size: 1.8rem;
-    color: #0066cc;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.location-description {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-.location-description strong {
-    color: #333;
-    font-weight: 600;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .members-intro h3 {
-        font-size: 1.5rem;
-    }
-    
-    .country {
-        font-size: 1.5rem;
-    }
-}
-/* Animación para áreas del mapa */
-@keyframes pulse {
-  0% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
-  100% { opacity: 0.5; transform: scale(1); }
-}
-
-.area-coverage {
-  fill: #cc0000;
-  opacity: 0.5;
-  animation: pulse 3s infinite;
-  cursor: pointer;
-}/* Sección CTA Final */
-.final-cta {
-    padding: 80px 0;
-    background-color: #0066cc;
-    color: white;
-    text-align: center;
-}
-
-.cta-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-.cta-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-content p {
-    font-size: 1.2rem;
+.left-box-highlight {
+    background: #a61919;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 4px 12px;
+    display: inline-block;
     margin-bottom: 10px;
+    border-radius: 2px;
+    letter-spacing: 0.2px;
 }
 
-.cta-content h3 {
-    font-size: 2rem;
-    margin: 20px 0;
+.left-box-desc {
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.ribbons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 80px;
+    margin-top: -40px;
+}
+
+.ribbon {
+    width: 120px;
+    height: 320px;
+    background: linear-gradient(180deg, #a61919 80%, #7a1010 100%);
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.ribbon:before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 120px;
+    height: 30px;
+    background: transparent;
+    box-shadow: 0 -8px 16px 0 rgba(166,25,25,0.15);
+    border-radius: 60px 60px 0 0;
+    z-index: 1;
+}
+
+.ribbon-logo {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.10);
+    z-index: 2;
+}
+
+.ribbon-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.map-section {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.map-container {
+    width: 520px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map-pin {
+    position: absolute;
+    left: 90px;
+    top: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+}
+
+.pin-icon {
+    width: 38px;
+    height: 38px;
+    background: #a61919;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    position: relative;
+}
+
+.pin-icon:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #a61919;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.pin-icon i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.pin-label {
+    background: #fff;
+    color: #a61919;
+    font-size: 16px;
     font-weight: 700;
-    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: 1.5px solid #a61919;
 }
 
-.cta-description {
-    font-size: 1.3rem;
-    line-height: 1.6;
+.right-text {
+    margin-left: 120px;
+    margin-top: 60px;
+    max-width: 420px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
 }
 
+.right-text-main {
+    color: #111;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.3;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.right-text-highlight, .right-text-highlight2 {
+    color: #a61919;
+    font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ribbons-container {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    .map-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .map-container, .right-text {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-content, .map-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-box, .right-text {
+        width: 90vw;
+        max-width: 95vw;
+    }
+    .map-container {
+        width: 90vw;
+    }
+}
 /* Sección de Contacto */
 .contact-section {
     padding: 50px 0;

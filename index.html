@@ -85,7 +85,7 @@
 </style>
 
 <body>
-    <section class="hero-container",id="inicio">
+    <section class="hero-container" ,id="inicio">
         <!-- Lado izquierdo con el texto -->
         <div class="content">
             <h1>¡Gracias por estar con nosotros en el Congreso ASIS 2025!</h1>
@@ -125,7 +125,7 @@
 
                 <div class="sissa-form">
 
-                    <form id="consultoria-form">
+                    <form action="enviar.php" method="POST" id="consultoria-form">
 
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -146,87 +146,87 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
 </section>
 
 
 <!-- Sección OFRECEMOS -->
 <section id="servicios">
 
-
-<body>
-    <div class="social-sidebar">
-        <a href="https://x.com/SISSA_MX/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#"><i
-                class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/sissa_mx/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/33243655/admin/dashboard/"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="container">
-        <div class="header">
-            <h1>Conoce nuestro</h1>
-            <h2>Ecosistema Integral</h2>
+    <body>
+        <div class="social-sidebar">
+            <a href="https://x.com/SISSA_MX/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/sissa_mx/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/33243655/admin/dashboard/"><i class="fab fa-linkedin"></i></a>
         </div>
-
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="https://replicate.delivery/xezq/yjaX5CqQ9p4PHpTEFfZh7VByeePVsLf6gQVvL608EhslfQIoC/out-0.png"
-                    alt="Seguridad Electrónica" />
-                <div class="badge">
-                    <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="badge-text">
-                        <span class="badge-title">SEGURIDAD</span>
-                        <span class="badge-subtitle">ELECTRÓNICA</span>
-                    </div>
-                </div>
+        <div class="container"><!-- dentro de un conetenedor-->
+            <div class="header-seguridad">
+                <h1>Conoce nuestro</h1>
+                <h2>Ecosistema Integral</h2>
             </div>
 
-            <div class="grid-item">
-                <img src="https://replicate.delivery/xezq/AGeeoTxLgeZ7Toft8wOEZvmpwRwdJ4gC6PiB9ZTI1bxmfQIoC/out-0.png"
-                    alt="Infraestructura de TI" />
-                <div class="right-badge">
-                    <div class="right-badge-text">
-                        <span class="badge-title">INFRAESTRUCTURA</span>
-                        <span class="badge-subtitle">DE TI</span>
-                    </div>
-                    <div class="right-badge-icon"><i class="fas fa-server"></i></div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="https://replicate.delivery/xezq/z1Xw7T0R0ub3GRr4w1wrJkyt02Q4u7CJPb9Ku1EE0LZeDhgKA/out-0.png"
-                    alt="Ingeniería e Infraestructura" />
-                <div class="badge">
-                    <div class="badge-icon"><i class="fas fa-hard-hat"></i></div>
-                    <div class="badge-text">
-                        <span class="badge-title">INGENIERÍA E</span>
-                        <span class="badge-subtitle">INFRAESTRUCTURA</span>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://replicate.delivery/xezq/yjaX5CqQ9p4PHpTEFfZh7VByeePVsLf6gQVvL608EhslfQIoC/out-0.png"
+                        alt="Seguridad Electrónica" />
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="badge-text">
+                            <span class="badge-title">SEGURIDAD</span>
+                            <span class="badge-subtitle">ELECTRÓNICA</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="grid-item">
-                <img src="https://replicate.delivery/xezq/eacSJcLiz71nF6c6tpuDd5BKekz9XaBOx7B6OdftIxflfQIoC/out-0.png"
-                    alt="Fábrica de Software" />
-                <div class="right-badge">
-                    <div class="right-badge-text">
-                        <span class="badge-title">FÁBRICA DE</span>
-                        <span class="badge-subtitle">SOFTWARE</span>
+                <div class="grid-item">
+                    <img src="https://replicate.delivery/xezq/AGeeoTxLgeZ7Toft8wOEZvmpwRwdJ4gC6PiB9ZTI1bxmfQIoC/out-0.png"
+                        alt="Infraestructura de TI" />
+                    <div class="right-badge">
+                        <div class="right-badge-text">
+                            <span class="badge-title">INFRAESTRUCTURA</span>
+                            <span class="badge-subtitle">DE TI</span>
+                        </div>
+                        <div class="right-badge-icon"><i class="fas fa-server"></i></div>
                     </div>
-                    <div class="right-badge-icon"><i class="fas fa-laptop-code"></i></div>
                 </div>
-            </div>
 
-            <div class="center-badge">
-                <div class="center-badge-title">SEGURIDAD</div>
-                <div class="center-badge-subtitle">TOTAL 360°</div>
+                <div class="grid-item">
+                    <img src="https://replicate.delivery/xezq/z1Xw7T0R0ub3GRr4w1wrJkyt02Q4u7CJPb9Ku1EE0LZeDhgKA/out-0.png"
+                        alt="Ingeniería e Infraestructura" />
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-hard-hat"></i></div>
+                        <div class="badge-text">
+                            <span class="badge-title">INGENIERÍA E</span>
+                            <span class="badge-subtitle">INFRAESTRUCTURA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img src="https://replicate.delivery/xezq/eacSJcLiz71nF6c6tpuDd5BKekz9XaBOx7B6OdftIxflfQIoC/out-0.png"
+                        alt="Fábrica de Software" />
+                    <div class="right-badge">
+                        <div class="right-badge-text">
+                            <span class="badge-title">FÁBRICA DE</span>
+                            <span class="badge-subtitle">SOFTWARE</span>
+                        </div>
+                        <div class="right-badge-icon"><i class="fas fa-laptop-code"></i></div>
+                    </div>
+                </div>
+
+                <div class="center-badge">
+                    <div class="center-badge-title">SEGURIDAD</div>
+                    <div class="center-badge-subtitle">TOTAL 360°</div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </section>
 <!-- Sección ACERCA DE NOSOTROS -->
- 
-<section class="about-section",id="nosotros">
+
+<section class="about-section" ,id="nosotros">
     <div class="container">
         <h2 class="section-title">ACERCA DE NOSOTROS</h2>
 
@@ -295,50 +295,67 @@
     </div>
 </section>
 <!-- Sección MIEMBROS ACTIVOS -->
-<section class="members-section">
+<section>
+
     <div class="container">
-        <h2 class="section-title">MIEMBROS ACTIVOS</h2>
 
-        <div class="members-intro">
-            <p>En <strong>SISSA Monitoring Integral</strong></p>
-            <h3>NOS ALIAMOS CON ORGANIZACIONES</h3>
-            <p class="main-description">líderes para estar siempre actualizados, conectados y comprometidos con la
-                excelencia, brindando soluciones que cumplen con los más altos estándares a nivel nacional e
-                internacional.</p>
+
+        <div class="header-miembros">
+            <div class="header-title">MIEMBROS</div>
+            <div class="header-subtitle">ACTIVOS</div>
         </div>
 
-        <div class="divider"></div>
+        <div class="main-content">
+            <div class="left-box">
+                <div class="left-box-title">En SISSA Monitoring Integral</div>
+                <div class="left-box-highlight">NOS ALIAMOS CON ORGANIZACIONES</div>
+                <div class="left-box-desc">
+                    líderes para estar siempre actualizados, conectados y comprometidos con la excelencia,
+                    brindando soluciones que cumplen con los más altos estándares a nivel nacional e internacional.
+                </div>
+            </div>
 
-        <div class="location-info">
-            <div class="country">México</div>
-            <p class="location-description">Presencia activa en toda la <strong>República Mexicana</strong> y
-                Representación en <strong>Centroamérica y Estados Unidos</strong></p>
+            <div class="ribbons-container">
+                <div class="ribbon">
+                    <div class="ribbon-logo">
+                        <img src="https://replicate.delivery/xezq/hWT7NeWff2QLaIo4Ayh8QDYEEOLm5BvO4jE8wDgx4pd1fcEUB/out-0.png"
+                            alt="Logo ASIS International" width="50" height="50" />
+                    </div>
+                </div>
+                <div class="ribbon">
+                    <div class="ribbon-logo">
+                        <img src="https://replicate.delivery/xezq/3C69Wld2vrrFJdfYCbtYf6O4Wa3dKbUk8BtXfGkZDeKof5IoC/out-0.png"
+                            alt="Logo AMESP" width="60" height="60" />
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="map-section">
+            <div class="map-container">
+                <img class="map-img"
+                    src="https://replicate.delivery/xezq/cHWqJ12MfZ1zFCTnF6fHkX3z9DwQHvLN6oiYr23XelI1fcEUB/out-0.png"
+                    alt="Mapa mundial" width="520" height="220" />
+                <div class="map-pin">
+                    <div class="pin-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="pin-label">México</div>
+                </div>
+            </div>
+            <div class="right-text">
+                <div class="right-text-main">
+                    Presencia activa en toda la<br>
+                    <span class="right-text-highlight">República Mexicana Y</span><br>
+                    Representación en<br>
+                    <span class="right-text-highlight2">Centroamérica y Estados Unidos</span>
+                </div>
+            </div>
+        </div>
+        </body>
     </div>
+
 </section>
-
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-<div id="advanced-map" style="height: 500px;"></div>
-
-<script>
-    const map = L.map('advanced-map').setView([23.6345, -102.5528], 4);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    // Agregar marcadores
-    const mexicoMarker = L.marker([23.6345, -102.5528]).addTo(map)
-        .bindPopup('<b>México</b><br>Presencia en toda la República');
-
-    const usaMarker = L.marker([37.0902, -95.7129]).addTo(map)
-        .bindPopup('<b>Estados Unidos</b><br>Representación comercial');
-</script>
-
-
 <!-- Sección CTA Final -->
 <section class="final-cta">
     <div class="container">
