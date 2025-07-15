@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
 </head>
 
 <!-- Header/Navbar -->
@@ -22,7 +25,7 @@
             <!-- Menú de navegación -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">INICIO</a></li>
+                    <li class="nav-item"><a href="#inicio" class="nav-link">INICIO</a></li>
                     <li class="nav-item"><a href="#servicios" class="nav-link">SERVICIOS</a></li>
                     <li class="nav-item"><a href="#nosotros" class="nav-link">¿QUIÉNES SOMOS?</a></li>
                     <li class="nav-item"><a href="#contacto" class="nav-link">CONTACTO</a></li>
@@ -35,8 +38,6 @@
 </header>
 
 <style>
-
-
     .panel1 {
         width: 50%;
         background-image: url('images/panel1.jpg');
@@ -68,43 +69,45 @@
 
         box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
     }
-   .right-content {
-  width: 100%;
-/* background-image: url('images/panel1.jpg'); *//* tu imagen de fondo */
-  background-size: cover;
-  background-position: center;
-/* clip-path: polygon(0 68%, 100% 39%, 100% 100%, 0% 100%);*/
-  display: flex;
-  align-items: flex-end;
-  padding: 2rem;
-  position: relative;
-}
 
-
+    .right-content {
+        width: 100%;
+        /* background-image: url('images/panel1.jpg'); */
+        /* tu imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        /* clip-path: polygon(0 68%, 100% 39%, 100% 100%, 0% 100%);*/
+        display: flex;
+        align-items: flex-end;
+        padding: 2rem;
+        position: relative;
+    }
 </style>
 
 <body>
-    <section class="hero-container">
-  <!-- Lado izquierdo con el texto -->
-  <div class="content">
-    <h1>¡Gracias por estar con nosotros en el Congreso ASIS 2025!</h1>
-    <p class="subtitle">Brindamos confianza, continuidad operativa y crecimiento sostenible a nuestros clientes</p>
-    <a href="#soluciones" class="cta-button">Conoce nuestra solución</a>
-  </div>
+    <section class="hero-container",id="inicio">
+        <!-- Lado izquierdo con el texto -->
+        <div class="content">
+            <h1>¡Gracias por estar con nosotros en el Congreso ASIS 2025!</h1>
+            <p class="subtitle">Brindamos confianza, continuidad operativa y crecimiento sostenible a nuestros clientes
+            </p>
+            <a href="#soluciones" class="cta-button">Conoce nuestra solución</a>
+        </div>
 
-  <!-- Lado derecho con imagen de fondo rectangular y paneles -->
-  <div class="right-content">
-    <div class="panel panel1"></div>
-    <div class="panel panel2"></div>
-    <div class="panel panel3"></div>
-  </div>
-</section>
+        <!-- Lado derecho con imagen de fondo rectangular y paneles -->
+        <div class="right-content">
+            <div class="panel panel1"></div>
+            <div class="panel panel2"></div>
+            <div class="panel panel3"></div>
+        </div>
+    </section>
 
 </body>
 
 
 <!-- Otras secciones irían aquí -->
 <!-- Sección SISSA Monitoring Integral -->
+
 <section class="sissa-section">
     <div class="container">
         <div class="sissa-content">
@@ -113,105 +116,117 @@
                 <h3>SOMOS INTEGRADORES<br>de soluciones tecnológicas</h3>
                 <p>que conectan seguridad electrónica, telecomunicaciones e ingeniería digital para proteger
                     infraestructuras críticas y organizaciones en todo México.</p>
-                    
+
                 <div class="marca-agua">SISSA</div>
             </div>
 
-            <div class="sissa-form">
-                <form id="consultoria-form">
-                    <div class="form-group">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">ENVIAR</button>
-                </form>
+            <div class="form-container">
+                <p class="form-title">Solicita una consultoría<br> especializada hoy.</p>
+
+                <div class="sissa-form">
+
+                    <form id="consultoria-form">
+
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">ENVIAR</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>
 </section>
 
 
 <!-- Sección OFRECEMOS -->
-<section class="servicios-section">
+<section id="servicios">
+
+
+<body>
+    <div class="social-sidebar">
+        <a href="https://x.com/SISSA_MX/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sissa_mx/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/33243655/admin/dashboard/"><i class="fab fa-linkedin"></i></a>
+    </div>
     <div class="container">
-        <div class="section-header">
-            <h2>OFRECEMOS</h2>
-            <p class="section-description">Protegemos <strong>organizaciones</strong> de forma integral, desde la
-                tecnología que las conecta, hasta la infraestructura que las sostiene.</p>
+        <div class="header">
+            <h1>Conoce nuestro</h1>
+            <h2>Ecosistema Integral</h2>
         </div>
 
-        <div class="servicios-grid">
-            <!-- Servicio 1 -->
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <img src="images/icons/seguridad.svg" alt="Seguridad Electrónica">
-                </div>
-                <h3>SEGURIDAD ELECTRÓNICA</h3>
-                <p class="servicio-tag">SEGURIDAD TOTAL</p>
-                <div class="servicio-details">
-                    <p>Descripción detallada del servicio de seguridad electrónica y cómo protege a las
-                        organizaciones.</p>
-                    <a href="#" class="servicio-link">Más información</a>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://replicate.delivery/xezq/yjaX5CqQ9p4PHpTEFfZh7VByeePVsLf6gQVvL608EhslfQIoC/out-0.png"
+                    alt="Seguridad Electrónica" />
+                <div class="badge">
+                    <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="badge-text">
+                        <span class="badge-title">SEGURIDAD</span>
+                        <span class="badge-subtitle">ELECTRÓNICA</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Servicio 2 -->
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <img src="images/icons/ti.svg" alt="Infraestructura de TI">
-                </div>
-                <h3>INFRAESTRUCTURA DE TI</h3>
-                <p class="servicio-tag">FÁBRICA DE SOFTWARE</p>
-                <div class="servicio-details">
-                    <p>Descripción detallada del servicio de infraestructura TI y desarrollo de software
-                        personalizado.</p>
-                    <a href="#" class="servicio-link">Más información</a>
+            <div class="grid-item">
+                <img src="https://replicate.delivery/xezq/AGeeoTxLgeZ7Toft8wOEZvmpwRwdJ4gC6PiB9ZTI1bxmfQIoC/out-0.png"
+                    alt="Infraestructura de TI" />
+                <div class="right-badge">
+                    <div class="right-badge-text">
+                        <span class="badge-title">INFRAESTRUCTURA</span>
+                        <span class="badge-subtitle">DE TI</span>
+                    </div>
+                    <div class="right-badge-icon"><i class="fas fa-server"></i></div>
                 </div>
             </div>
 
-            <!-- Servicio 3 -->
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <img src="images/icons/ingenieria.svg" alt="Ingeniería">
-                </div>
-                <h3>INGENIERÍA E INFRAESTRUCTURA</h3>
-                <!--  <p class="servicio-tag">SEGURIDAD TOTAL</p> -->
-                <div class="servicio-details">
-                    <p>Descripción detallada del servicio de ingeniería e infraestructura para protección integral.
-                    </p>
-                    <a href="#" class="servicio-link">Más información</a>
-                </div>
-            </div>
-            <!-- Servicio 4 -->
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <img src="images/icons/ingenieria.svg" alt="Ingeniería">
-                </div>
-                <h3>FÁBRICA DE SOFTWARE</h3>
-                <!-- <p class="servicio-tag">SEGURIDAD TOTAL</p> -->
-                <div class="servicio-details">
-                    <p>Descripción detallada del servicio de ingeniería e infraestructura para protección integral.
-                    </p>
-                    <a href="#" class="servicio-link">Más información</a>
+            <div class="grid-item">
+                <img src="https://replicate.delivery/xezq/z1Xw7T0R0ub3GRr4w1wrJkyt02Q4u7CJPb9Ku1EE0LZeDhgKA/out-0.png"
+                    alt="Ingeniería e Infraestructura" />
+                <div class="badge">
+                    <div class="badge-icon"><i class="fas fa-hard-hat"></i></div>
+                    <div class="badge-text">
+                        <span class="badge-title">INGENIERÍA E</span>
+                        <span class="badge-subtitle">INFRAESTRUCTURA</span>
+                    </div>
                 </div>
             </div>
 
+            <div class="grid-item">
+                <img src="https://replicate.delivery/xezq/eacSJcLiz71nF6c6tpuDd5BKekz9XaBOx7B6OdftIxflfQIoC/out-0.png"
+                    alt="Fábrica de Software" />
+                <div class="right-badge">
+                    <div class="right-badge-text">
+                        <span class="badge-title">FÁBRICA DE</span>
+                        <span class="badge-subtitle">SOFTWARE</span>
+                    </div>
+                    <div class="right-badge-icon"><i class="fas fa-laptop-code"></i></div>
+                </div>
+            </div>
+
+            <div class="center-badge">
+                <div class="center-badge-title">SEGURIDAD</div>
+                <div class="center-badge-subtitle">TOTAL 360°</div>
+            </div>
         </div>
     </div>
+</body>
 </section>
 <!-- Sección ACERCA DE NOSOTROS -->
-<section class="about-section">
+ 
+<section class="about-section",id="nosotros">
     <div class="container">
         <h2 class="section-title">ACERCA DE NOSOTROS</h2>
 
@@ -350,7 +365,7 @@
             </div>
 
             <div class="social-media">
-                <h3>Síguenos en:</h3>
+                <h3></h3>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#" target="_blank"
                         class="social-icon">
