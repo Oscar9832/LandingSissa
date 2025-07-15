@@ -167,22 +167,39 @@ body { /*letras de somos un ecosistema*/
       font-family: 'Arial', sans-serif;
       background: #fff;
       color: #333;
-    }
-
-    .hero-container {/*centrado de letras hacia el lado*/
-      display: flex;
       
-      min-height: 50vh;
     }
 
-    .content {
-      flex: 1;
-      padding: 5rem 8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: #f8f9fa; /* Fondo claro para el área de texto */
-    }
+.hero-container {
+  display: flex;
+  min-height: 90vh;
+  width: 100%;
+  height: 500px;
+}
+
+/* Lado izquierdo con texto */
+.content {
+  width: 50%;
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Estilo base de los paneles */
+.panel {
+  width: 1000px;
+  height: 800px;
+}
+
+
+
+/* Clip-path personalizado por panel */
+
+
+
+
 
     h1 {
       font-size: 2.5rem;
@@ -258,6 +275,13 @@ body { /*letras de somos un ecosistema*/
 
 
 /* Sección SISSA Monitoring Integral */
+.container-sissa {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 .sissa-section {
     padding: 80px 0;
     background-color: #f9f9f9;
@@ -265,12 +289,14 @@ body { /*letras de somos un ecosistema*/
 
 .sissa-content {
     display: flex;
-    align-items: center;
+    
     gap: 50px;
 }
 
 .sissa-text {
     flex: 1;
+    padding: 40px;
+  position: relative;
 }
 
 .sissa-text h2 {
@@ -297,9 +323,10 @@ body { /*letras de somos un ecosistema*/
     color: #555;
 }
 
+
 .sissa-form {
     flex: 1;
-    background: white;
+    background: #2d3748;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -309,9 +336,10 @@ body { /*letras de somos un ecosistema*/
     margin-bottom: 20px;
 }
 
+
 .form-group input,
-.form-group textarea {
-    width: 100%;
+.form-group textarea {/*diseño del formulario*/
+    width: 95%;
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -324,7 +352,7 @@ body { /*letras de somos un ecosistema*/
     resize: vertical;
 }
 
-.submit-btn {
+.submit-btn {/*boton de enviar*/
     background-color: #b10e0e;
     color: white;
     border: none;
@@ -340,6 +368,18 @@ body { /*letras de somos un ecosistema*/
 .submit-btn:hover {
     background-color: #fa0303;
 }
+
+ .marca-agua {
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+            font-size: 80px;
+            font-weight: 900;
+            color: #f0f0f0;
+            letter-spacing: 5px;
+        }
+        
+
 
 /* Responsive */
 @media (max-width: 768px) {

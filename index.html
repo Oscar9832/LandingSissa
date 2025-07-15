@@ -34,29 +34,15 @@
     </div>
 </header>
 
-<!-- Hero Section 
-<section class="hero">
-    <div class="container">
-        <h1>Somos un ecosistema completo de protección tecnológica, ingeniería y software</h1>
-      <body>
-  <div class="panel"></div>
-</body> 
-        <p class="subtitle">Brindamos confianza, continuidad operativa y crecimiento sostenible a nuestros clientes
-        </p>
-        <a href="#contacto" class="cta-button">Conoce nuestras soluciones</a>
-    </div>
-
-</section>
-
--->
-
 <style>
+
+
     .panel1 {
         width: 50%;
         background-image: url('images/panel1.jpg');
         /* Tu imagen aquí */
         background-size: cover;
-clip-path: polygon(20% 54%, 88% 40%, 88% 100%, 20% 100%);
+        clip-path: polygon(20% 54%, 88% 40%, 88% 100%, 20% 100%);
 
         box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
     }
@@ -67,7 +53,7 @@ clip-path: polygon(20% 54%, 88% 40%, 88% 100%, 20% 100%);
         /* Tu imagen aquí */
         background-size: cover;
 
-clip-path: polygon(20% 38%, 88% 27%, 88% 100%, 20% 100%);
+        clip-path: polygon(20% 38%, 88% 27%, 88% 100%, 20% 100%);
 
         box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
     }
@@ -78,29 +64,45 @@ clip-path: polygon(20% 38%, 88% 27%, 88% 100%, 20% 100%);
         /* Tu imagen aquí */
         background-size: cover;
 
-clip-path: polygon(20% 24%, 88% 13%, 88% 100%, 20% 100%);
+        clip-path: polygon(20% 24%, 88% 13%, 88% 100%, 20% 100%);
 
         box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
     }
+   .right-content {
+  width: 100%;
+/* background-image: url('images/panel1.jpg'); *//* tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+/* clip-path: polygon(0 68%, 100% 39%, 100% 100%, 0% 100%);*/
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  position: relative;
+}
+
+
 </style>
 
 <body>
     <section class="hero-container">
-        <div class="content">
-            <h1> ¡Gracias por estar con nosotros en el Congreso ASIS 2025!</h1>
-            <p class="subtitle">Brindamos confianza, continuidad operativa y crecimiento sostenible a nuestros clientes
-            </p>
-            <a href="#soluciones" class="cta-button">Conoce nuestra solución</a>
-        </div>
-    <div class="panel1"></div>
-        <div class="panel2"></div>
-        <div class="panel3"></div>
-    
-    </section>
-    
+  <!-- Lado izquierdo con el texto -->
+  <div class="content">
+    <h1>¡Gracias por estar con nosotros en el Congreso ASIS 2025!</h1>
+    <p class="subtitle">Brindamos confianza, continuidad operativa y crecimiento sostenible a nuestros clientes</p>
+    <a href="#soluciones" class="cta-button">Conoce nuestra solución</a>
+  </div>
+
+  <!-- Lado derecho con imagen de fondo rectangular y paneles -->
+  <div class="right-content">
+    <div class="panel panel1"></div>
+    <div class="panel panel2"></div>
+    <div class="panel panel3"></div>
+  </div>
+</section>
+
 </body>
 
-</html>
+
 <!-- Otras secciones irían aquí -->
 <!-- Sección SISSA Monitoring Integral -->
 <section class="sissa-section">
@@ -111,8 +113,8 @@ clip-path: polygon(20% 24%, 88% 13%, 88% 100%, 20% 100%);
                 <h3>SOMOS INTEGRADORES<br>de soluciones tecnológicas</h3>
                 <p>que conectan seguridad electrónica, telecomunicaciones e ingeniería digital para proteger
                     infraestructuras críticas y organizaciones en todo México.</p>
-
-                <a href="#contacto" class="cta-button">Solicita una consultoría especializada hoy</a>
+                    
+                <div class="marca-agua">SISSA</div>
             </div>
 
             <div class="sissa-form">
@@ -138,7 +140,8 @@ clip-path: polygon(20% 24%, 88% 13%, 88% 100%, 20% 100%);
         </div>
     </div>
 </section>
-<script src="js/main.js"></script>
+
+
 <!-- Sección OFRECEMOS -->
 <section class="servicios-section">
     <div class="container">
