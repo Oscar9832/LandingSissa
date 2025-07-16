@@ -573,508 +573,58 @@ body { /*letras de somos un ecosistema*/
 --------------------------------------
 
 /* Sección ACERCA DE NOSOTROS */
-.about-section {
-    padding: 80px 0;
-    background-color: #f5f7fa;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 60px;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background-color: #0066cc;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.stat-card {
-    background: white;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.stat-number {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #0066cc;
-    line-height: 1;
-    margin-bottom: 15px;
-}
-
-.stat-label {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.4;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+ html, body {
+      width: 100%;
+      height: 100%;
     }
+.fullscreen-img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media (max-width: 576px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .stat-number {
-        font-size: 3rem;
-    }
-}
-.stat-icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto 15px;
+.fullscreen-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Usa cover si prefieres que llene recortando */
+  display: flex;
 }
 
-.stat-icon img {
+/* RESPONSIVE ADICIONAL (opcional para mejor experiencia en móviles) */
+@media (max-width: 768px) {
+  .fullscreen-img img {
+    object-fit: contain;
+  }
+}
+
+/* Sección CERTIFICACIONES */
+
+
+.full-screen-container {
+    width: 100%;        /* 100% del ancho del viewport */
+    height: 100%;       /* 100% del alto del viewport */
+    overflow: hidden;    /* Evita desbordamiento */
+}
+
+.full-screen-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-}
-/* Sección CERTIFICACIONES */
-.certifications-section {
-    padding: 80px 0;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.section-intro {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto 50px;
-}
-
-.certification-card {
-    background: #f9f9f9;
-    padding: 40px 20px;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    min-height: 250px;
+    object-fit: cover;   /* Cubre todo el espacio sin distorsión */
+    object-position: center; /* Centra la imagen */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.certification-number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #0066cc;
-    margin-bottom: 20px;
-}
-
-.certification-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #0066cc;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.certification-bar {
-    width: 80px;
-    height: 4px;
-    background-color: #0066cc;
-    margin-bottom: 20px;
-}
-
-.certification-description {
-    font-size: 1rem;
-    color: #666;
-    padding: 0 20px;
-}
-
-/* Fondos especiales para cada tarjeta */
-.iso-card {
-    background-color: #f0f7ff;
-    border: 1px solid #cce0ff;
-}
-
-.biometrics-card {
-    background-color: #fff0f5;
-    border: 1px solid #ffd6e7;
-}
-
-.cmmi-card {
-    background-color: #f0fff4;
-    border: 1px solid #ccffd6;
-}
-
-.certifications-footer {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.certifications-footer p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.certifications-footer h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .certifications-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .certification-card {
-        min-height: 200px;
-    }
-}
-
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .certification-number {
-        font-size: 2.5rem;
-    }
-    
-    .certification-text {
-        font-size: 1.5rem;
-    }
-}
-.certification-number {
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: 2px;
-}
-.certification-bar {
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #0066cc, transparent);
-    width: 100px;
-}
-
-.certification-bar {
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #0066cc, transparent);
-    width: 100px;
 }
 /* Sección MIEMBROS ACTIVOS */
-
-.header-miembros {
-    background: #a61919;
-    padding: 0;
-    text-align: center;
+.contenedor-imagen {
+    max-width: 100%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar en la página */
+    padding: 20px;
 }
 
-.header-title {
-    color: #fff;
-    font-size: 40px;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    margin: 0;
-    padding-top: 24px;
-    line-height: 1;
-}
-
-.header-subtitle {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 0;
-    padding-bottom: 24px;
-    line-height: 1;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 40px;
-    margin-left: 0;
-    margin-right: 0;
-    position: relative;
-}
-
-.left-box {
-    background: #fff;
-    border: 1.5px solid #d1d1d1;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-top: 10px;
-    width: 420px;
-    min-height: 220px;
-    box-sizing: border-box;
-    padding: 36px 32px 32px 32px;
-    box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.left-box-title {
-    font-size: 18px;
-    font-weight: 500;
-    color: #111;
-    margin-bottom: 12px;
-}
-
-.left-box-highlight {
-    background: #a61919;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 900;
-    padding: 4px 12px;
-    display: inline-block;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    letter-spacing: 0.2px;
-}
-
-.left-box-desc {
-    color: #b3b3b3;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.ribbons-container {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-left: 80px;
-    margin-top: -40px;
-}
-
-.ribbon {
-    width: 120px;
-    height: 320px;
-    background: linear-gradient(180deg, #a61919 80%, #7a1010 100%);
-    border-radius: 0 0 60px 60px;
-    position: relative;
-    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.10);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 2;
-}
-
-.ribbon:before {
-    content: '';
-    position: absolute;
-    top: -18px;
-    left: 0;
-    width: 120px;
-    height: 30px;
-    background: transparent;
-    box-shadow: 0 -8px 16px 0 rgba(166,25,25,0.15);
-    border-radius: 60px 60px 0 0;
-    z-index: 1;
-}
-
-.ribbon-logo {
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.10);
-    z-index: 2;
-}
-
-.ribbon-logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-.map-section {
-    width: 100%;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-}
-
-.map-container {
-    width: 520px;
-    margin-left: 40px;
-    position: relative;
-}
-
-.map-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.map-pin {
-    position: absolute;
-    left: 90px;
-    top: 90px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    z-index: 2;
-}
-
-.pin-icon {
-    width: 38px;
-    height: 38px;
-    background: #a61919;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
-    position: relative;
-}
-
-.pin-icon:after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    background: #a61919;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.pin-icon i {
-    color: #fff;
-    font-size: 18px;
-}
-
-.pin-label {
-    background: #fff;
-    color: #a61919;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 8px;
-    padding: 4px 16px;
-    margin-left: 8px;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
-    border: 1.5px solid #a61919;
-}
-
-.right-text {
-    margin-left: 120px;
-    margin-top: 60px;
-    max-width: 420px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.right-text-main {
-    color: #111;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 0;
-    line-height: 1.3;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-}
-
-.right-text-highlight, .right-text-highlight2 {
-    color: #a61919;
-    font-weight: 900;
-}
-
-@media (max-width: 1200px) {
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .ribbons-container {
-        margin-left: 0;
-        margin-top: 40px;
-    }
-    .map-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .map-container, .right-text {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 900px) {
-    .main-content, .map-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .left-box, .right-text {
-        width: 90vw;
-        max-width: 95vw;
-    }
-    .map-container {
-        width: 90vw;
-    }
+.imagen-optimizada {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: 100%; /* Mantiene la proporción */
+    display: block; /* Elimina espacios no deseados */
+     /* Opcional: borde sutil */
 }
 /* Sección de Contacto */
 .contact-section {
@@ -1260,5 +810,248 @@ body { /*letras de somos un ecosistema*/
         justify-content: center;
     }
 }
+
+.header span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+.header .bold {
+    font-weight: 700;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    padding: 64px 0;
+    flex: 1 1 auto;
+}
+
+.left-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px 0 rgba(44, 0, 0, 0.06);
+    border: 2px solid #f3f3f3;
+    padding: 56px 48px 48px 48px;
+    width: 540px;
+    margin-right: 48px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-card .title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.left-card .highlight {
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 8px 16px;
+    display: inline-block;
+    margin-bottom: 24px;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+}
+
+.left-card .desc {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--gray);
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+/* Sección de contacto */
+.right-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 32px;
+    margin-top: 32px;
+}
+
+.contact-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.contact-gradient {
+    background: linear-gradient(90deg, #e41d8c 0%, #7b2ff2 100%);
+    border-radius: 60px 120px 120px 60px / 60px 120px 120px 60px;
+    padding: 36px 160px 36px 48px;
+    min-width: 420px;
+    min-height: 120px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-gradient .contact-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.whatsapp-icon {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.whatsapp-icon img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 0 rgba(44, 0, 0, 0.20);
+    background: #fff;
+}
+
+.contact-info {
+    margin-top: 32px;
+    margin-left: 16px;
+}
+
+.contact-info p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 32px;
+    color: var(--gray);
+    margin: 0 0 8px 0;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: var(--red-gradient);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 56px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 0;
+    }
+    .left-card {
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+    .right-contact {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .header span {
+        font-size: 40px;
+    }
+    .left-card, .contact-gradient {
+        min-width: 320px;
+        width: 90vw;
+        padding: 32px 16px;
+    }
+    .contact-gradient {
+        padding: 24px 80px 24px 24px;
+    }
+    .contact-gradient .contact-title {
+        font-size: 32px;
+    }
+    .contact-info p {
+        font-size: 20px;
+    }
+    .footer {
+        font-size: 18px;
+        padding: 12px 16px;
+    }
+    .whatsapp-icon {
+        right: -40px;
+        width: 80px;
+        height: 80px;
+    }
+    .whatsapp-icon img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header span {
+        font-size: 24px;
+    }
+    .left-card, .contact-gradient {
+        min-width: 0;
+        width: 98vw;
+        padding: 16px 4vw;
+    }
+    .contact-gradient {
+        padding: 16px 40px 16px 16px;
+    }
+    .contact-gradient .contact-title {
+        font-size: 20px;
+    }
+    .contact-info p {
+        font-size: 14px;
+    }
+    .footer {
+        font-size: 12px;
+        padding: 8px 4vw;
+    }
+    .whatsapp-icon {
+        right: -24px;
+        width: 40px;
+        height: 40px;
+    }
+    .whatsapp-icon img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
 
 
