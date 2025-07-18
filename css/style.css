@@ -11,7 +11,7 @@
 
 .container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -221,6 +221,15 @@ h1 {
     line-height: 1.2;
 }
 
+image-container, .image-wrapper {
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+}
+
+.image-container img, .image-wrapper img {
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacio inferior no deseado */
+}
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
@@ -318,6 +327,7 @@ h1 {
     flex: 1;
     padding: 30px;
     position: relative;
+    margin-top: 100px;
 }
 .sissa-text h1 {
     font-size: 28px;
@@ -325,8 +335,8 @@ h1 {
     font-weight: 80;
     margin: 5;
     line-height: 1.1;
-    color: #    color: #777777;
-;
+   color: #777777;
+
 }
 .sissa-text h2 {
     font-size: 2rem;
@@ -358,9 +368,12 @@ h1 {
 .sissa-form {
     flex: 1;
     background: #2d3748;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px px rgba(173, 22, 22, 0.1);
+    padding-right: 40px; /* Más espacio a la derecha */
+    padding-left: 30px;    /* Sin espacio a la izquierda */
+
 }
 
 .form-group {
@@ -380,7 +393,7 @@ h1 {
 }
 
 .form-group textarea {
-    min-height: 120px;
+    min-height: 10px;
     resize: vertical;
 }
 
@@ -419,7 +432,13 @@ h1 {
     margin-bottom: 1.5rem;
     color: #000000;
 }
-
+.form-subtitulo {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #353434b8;
+}
 
 
 /* Responsive */
@@ -456,12 +475,21 @@ h1 {
 .header-seguridad {
 
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.texto-rojo {
+    color: #9b0303;
+    font-weight: 700; /* Rojo estándar */
+    /* O usa alguno de estos rojos alternativos: */
+    /* color: #e74c3c; */
+    /* color: #c0392b; */
+    /* color: #d63031; */
 }
 
 .header-seguridad h1 {
     color: #666666;
-    font-size: 48px;
+    font-size: 80px;
     font-weight: 400;
     margin-bottom: 10px;
 }
