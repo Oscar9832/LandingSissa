@@ -6,12 +6,7 @@ $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 $mensaje = $_POST['mensaje'];
 
-// 2. Conectar con la base de datos MySQL
-$host = "140.84.168.240";          
-$puerto = "3306"
-$usuario = "Admin";      // ej. root
-$contrasena = "SissaDigital$1"; // ej. root o la que tengas
-$base_de_datos = "Formulario_sissa";
+
 
 $conn = new mysqli($host, $usuario, $contrasena, $base_de_datos);
 
