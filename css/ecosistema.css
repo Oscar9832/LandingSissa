@@ -1,0 +1,355 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #333;
+    padding-top: 80px; /* Ajusta según la altura final del header */
+}
+
+/* Header styles - Versión corregida */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Navigation styles */
+.main-nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-link:hover {
+    color: #b10009;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #b10009;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Sección Seguridad que piensa */
+.seguridad-section {
+    width: 100%;
+    padding: 100px 20px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.seguridad-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    color: #b10009;
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.subtitle, .subtitle2 {
+    color: #666;
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.desc {
+    color: #555;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 40px auto 0;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+.desc strong {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 2.8rem;
+    }
+    .subtitle, .subtitle2 {
+        font-size: 1.8rem;
+    }
+    .desc {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+    }
+    
+    .logo img {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+    
+    .nav-list {
+        justify-content: center;
+    }
+    
+    .nav-item {
+        margin: 0 15px;
+    }
+    
+    body {
+        padding-top: 120px;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle, .subtitle2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+    
+    .seguridad-section {
+        padding: 60px 15px;
+    }
+}
+
+.imagen-ecosistema {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.imagen-ecosistema img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+.image-grid {
+    display: grid;
+    /* Una sola celda que contendrá ambos elementos */
+    grid-template-areas: "overlay";
+}
+
+.image-grid img,
+.image-grid button {
+    grid-area: overlay;
+    /* Ambos elementos ocupan la misma área */
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.image-grid button {
+    justify-self: 30mpx;
+    /* Centrado horizontal */
+    align-self: center;
+    /* Centrado vertical */
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1;
+    /* Asegura que el botón esté por encima */
+}   
+.container-sissa {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .main-question {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 44px;
+      color: #666666;
+      font-weight: 400;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1.1;
+    }
+    .highlight {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 44px;
+      color: #b80000;
+      font-weight: 700;
+      margin-bottom: 0;
+      display: block;
+      line-height: 1.1;
+    }
+    .subtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      color: #666666;
+      font-weight: 400;
+      margin-top: 28px;
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+---/*conetendor de los de su seguridad */
+    .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Cambiado de center a flex-start para mejor alineación */
+    gap: 3rem;
+    /* Aumenté el espacio entre columnas */
+    padding: 2rem;
+    max-width: 1400px;
+    /* Contenedor más ancho */
+    margin: auto;
+}
+
+
+.columna:first-child {
+    flex: 0 1 20%;
+    /* No crece, puede encogerse, base del 40% */
+    min-width: 300px;
+}
+
+/* Columna derecha (texto) - más ancha */
+.columna:last-child {
+    flex: 1 1 45%;
+    /* Puede crecer, puede encogerse, base del 55% */
+    min-width: 300px;
+}
+
+.imagen img {
+    width: 130%;
+    /* Cambiado de 45% a 100% para llenar su columna */
+    max-width: 80%;
+    /* Límite máximo */
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+}
+
+.texto h1 {
+    font-size: 3rem;
+    color: #b40000;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.texto p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.destacado {
+    font-weight: bold;
+}
+
+.rojo {
+    color: #b40000;
+}
+
+.texto {
+    text-align: left;
+    /* Asegura alineación a la izquierda */
+    padding-left: 0;
+    /* Empuja el texto más hacia la izquierda dentro de su columna */
+}

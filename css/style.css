@@ -11,7 +11,7 @@
 
 .container {
     width: 100%;
-    max-width: 1450px;
+    max-width: 1350px;
     margin: 0 auto;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .nav-link {
-    color: #33333396;
+    color: #cc0000;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -477,7 +477,7 @@ image-container,
 /* Sección OFRECEMOS */
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     position: relative;
@@ -1383,3 +1383,6 @@ image-container,
     z-index: 1;
     /* Asegura que el botón esté por encima */
 }
+
+
+

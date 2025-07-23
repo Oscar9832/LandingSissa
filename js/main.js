@@ -22,39 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Manejo del formulario de consultoría
-document.getElementById('consultoria-form').addEventListener('submit', function(e) {
+document.getElementById("consultoria-form").addEventListener("submit", async function(e) {
     e.preventDefault();
-    
-    // Obtener los valores del formulario
-    const formData = {
-        nombre: document.getElementById('nombre').value,
-        empresa: document.getElementById('empresa').value,
-        email: document.getElementById('email').value,
-        telefono: document.getElementById('telefono').value,
-        mensaje: document.getElementById('mensaje').value
+
+    const data = {
+        nombre: document.getElementById("nombre").value,
+        empresa: document.getElementById("empresa").value,
+        email: document.getElementById("email").value,
+        telefono: document.getElementById("telefono").value,
+        mensaje: document.getElementById("mensaje").value
     };
-    
-    // Validación básica
-    if (!formData.nombre || !formData.email || !formData.telefono) {
-        alert('Por favor complete los campos requeridos');
-        return;
-    }
-    // Añadir después de la validación básica
-if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    alert('Por favor ingrese un correo electrónico válido');
-    return;
-}
-    
-    // Aquí iría el código para enviar los datos al servidor
-    console.log('Datos del formulario:', formData);
-    
-    // Mostrar mensaje de éxito
-    alert('¡Gracias por su solicitud! Nos pondremos en contacto pronto.');
-    
-    // Resetear el formulario
-    this.reset();
-    
-    // Opcional: Redirigir o mostrar mensaje adicional
+
+    const response = await fetch("http://localhost/api/guardar.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    alert(result.mensaje || result.error);
 });
 // Añadir al JavaScript
 window.addEventListener('scroll', function() {

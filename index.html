@@ -12,23 +12,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
         rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 </head>
 
 <!-- Header/Navbar -->
 <header class="header">
     <div class="container">
         <div class="logo-container">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="SISSA Logo">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="SISSA Logo">
             </a>
 
-            <!-- Menú de navegacxón -->
+            <!-- Menú de navegación -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#inicio" class="nav-link">INICIO</a></li>
-                    <li class="nav-item"><a href="#servicios" class="nav-link">SERVICIOS</a></li>
-                    <li class="nav-item"><a href="#nosotros" class="nav-link">¿QUIÉNES SOMOS?</a></li>
-                    <li class="nav-item"><a href="#contacto" class="nav-link">CONTACTO</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">INICIO</a></li>
+                    <li class="nav-item"><a href="ecosistema.html" class="nav-link">ECOSISTEMA SISSA</a></li>
+                    
                 </ul>
             </nav>
 
@@ -38,7 +38,6 @@
 </header>
 
 <style>
-    
     .panel1 {
         width: 50%;
         background-image: url('images/panel1.jpg');
@@ -83,7 +82,6 @@
         padding: 0.1rem;
         position: relative;
     }
-    
 </style>
 
 <body>
@@ -132,7 +130,7 @@
 
                 <div class="sissa-form">
 
-                    <form action="enviar.php" method="POST" id="consultoria-form">
+                    <form action="guardar.php" method="POST" id="consultoria-form">
 
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -165,11 +163,11 @@
 
     <body>
         <div class="social-sidebar">
-            <a href="https://x.com/SISSA_MX/"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#"><i
+            <a href="https://x.com/SISSA_MX/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#" target="_blank"><i
                     class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/sissa_mx/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/33243655/admin/dashboard/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sissa_mx/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/33243655/admin/dashboard/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
 
 
@@ -201,11 +199,10 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="grid-item">
-                    <img src="images/infraestructura.png"
-                        alt="Infraestructura de TI" />
+                    <img src="images/infraestructura.png" alt="Infraestructura de TI" />
                     <div class="right-badge">
                         <div class="right-badge-text">
                             <span class="badge-title">INFRAESTRUCTURA</span>
@@ -216,8 +213,7 @@
                 </div>
 
                 <div class="grid-item">
-                    <img src="images/ingenieria.png"
-                        alt="Ingeniería e Infraestructura" />
+                    <img src="images/ingenieria.png" alt="Ingeniería e Infraestructura" />
                     <div class="badge">
                         <div class="badge-icon"><i class="fas fa-hard-hat"></i></div>
                         <div class="badge-text">
@@ -228,8 +224,7 @@
                 </div>
 
                 <div class="grid-item">
-                    <img src="images/Software.png"
-                        alt="Fábrica de Software" />
+                    <img src="images/Software.png" alt="Fábrica de Software" />
                     <div class="right-badge">
                         <div class="right-badge-text">
                             <span class="badge-title">FÁBRICA DE</span>
@@ -241,11 +236,11 @@
 
                 <div class="center-badge">
                     <div class="center-badge-title">UN <span class="center-texto">ECOSISTEMA INTEGRADO.</span>
-                    <div class="center-badge-sub">CUATRO DIVISIONES.</div>
-                    <div class="center-badge-subtitle">UNA SOLA <span class="center-texto">VISIÓN</span></div>
+                        <div class="center-badge-sub">CUATRO DIVISIONES.</div>
+                        <div class="center-badge-subtitle">UNA SOLA <span class="center-texto">VISIÓN</span></div>
+                    </div>
                 </div>
             </div>
-        </div>
     </body>
 </section>
 
@@ -253,41 +248,42 @@
 
 <!-- Sección ACERCA DE NOSOTROS -->
 
-  <div class="contenedor">
+<div class="contenedor">
     <div class="columna imagen">
-      <img src="images/guardia.png" alt="Guardia de seguridad">
+        <img src="images/guardia.png" alt="Guardia de seguridad">
     </div>
     <div class="columna texto">
         <br>
-      <h2>¿Y los guardias de seguridad?</h2>
-      <h1>También son parte del ecosistema.</h1>
-      <p>
-        Los <strong>guardias de seguridad</strong> son una parte fundamental del <strong>ecosistema</strong>.
-        En SISSA, su labor se potencia mediante <strong>tecnología avanzada</strong>, no se reemplaza.
-        Guardias conectados, informados y respaldados por sistemas automatizados garantizan mayor eficiencia y reducen errores humanos.
-      </p>
-      <p class="destacado">
-        <span class="rojo">Menos</span> improvisación. <span class="rojo">Más</span> control.<br>
-        <span class="rojo">Menos</span> vigilancia pasiva. <span class="rojo">Más</span> tecnología que anticipa.
-      </p>
+        <h2>¿Y los guardias de seguridad?</h2>
+        <h1>También son parte del ecosistema.</h1>
+        <p>
+            Los <strong>guardias de seguridad</strong> son una parte fundamental del <strong>ecosistema</strong>.
+            En SISSA, su labor se potencia mediante <strong>tecnología avanzada</strong>, no se reemplaza.
+            Guardias conectados, informados y respaldados por sistemas automatizados garantizan mayor eficiencia y
+            reducen errores humanos.
+        </p>
+        <p class="destacado">
+            <span class="rojo">Menos</span> improvisación. <span class="rojo">Más</span> control.<br>
+            <span class="rojo">Menos</span> vigilancia pasiva. <span class="rojo">Más</span> tecnología que anticipa.
+        </p>
     </div>
-  </div>
+</div>
 
 <!-- Sección NOSOTROS -->
- <br>
- <br>
- <div class="full-screen-container">
+<br>
+<br>
+<div class="full-screen-container">
     <img src="images/nosotros.png" alt="Certificaciones SISSA" class="full-screen-image">
 </div>
- <br>
- <br>
+<br>
+<br>
 <div class="full-screen-container">
     <img src="images/iconos-nosotros.png" alt="Certificaciones SISSA" class="full-screen-image">
 </div>
 
 <!-- Sección CERTIFICACIONES -->
- <br>
- <br>
+<br>
+<br>
 <div class="full-screen-container">
     <img src="images/Certificaciones.png" alt="Certificaciones SISSA" class="full-screen-image">
 </div>
@@ -341,19 +337,57 @@
 -->
 <div class="image-grid">
     <img src="images/industria.png" alt="Imagen de fondo">
-    
+
 </div>
 
 
 <div class="image-grid">
     <img src="images/Contacto.png" alt="Imagen de fondo">
-    <button class="grid-button">Botón</button>
+   <button class="grid-button" onclick="window.open('https://wa.me/5527059970?text=Hola%20requiero%20más%20información', '_blank')"></button>
+
+    
 </div>
 <!-- Sección de Contacto -->
 
 <body>
 
 </body>
+
+
+<section class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Contáctanos:</h2>
+
+        <div class="contact-info">
+            <div class="contact-details">
+                <p class="contact-phone">Teléfono: <a href="tel:+529514091394">+52 (951) 409 1394</p>
+                <p class="contact-email">Email: <a
+                        href="mailto:contacto@sissamonitoring.com">contacto@sissamonitoring.com</a></p>
+            </div>
+
+            <div class="social-media">
+                <h3></h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#" target="_blank"
+                        class="social-icon">
+                        <img src="images//icons/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.linkedin.com/company/33243655/admin/dashboard/" target="_blank"
+                        class="social-icon">
+                        <img src="images//icons/linkedin_1419502.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/sissa_mx/" target="_blank" class="social-icon">
+                        <img src="images/icons/instagram_1384063.svg" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/SISSA_MX/" target="_blank" class="social-icon">
+                        <img src="images/icons/twitter_5968830.svg" alt="Twitter/X">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 
 
