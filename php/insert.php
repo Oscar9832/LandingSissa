@@ -1,4 +1,8 @@
 <?php
+// Habilitar CORS
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     require_once __DIR__ . '/connetion.php';
@@ -24,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 
     // Enviar correo
-    $destinatario = "sandy.paez@sissamx.com"; // ← Cambia esto por tu correo real
+    $destinatario = "oscar.viloria@block256.com.mx"; // ← Cambia esto por tu correo real
     $asunto = "Nueva solicitud de contacto";
     $contenido = "
         Has recibido una nueva solicitud desde el formulario:
@@ -35,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         Teléfono: $telefono
         Mensaje: $mensaje
     ";
-    $cabeceras = "From: no-reply@tudominio.com\r\n" .
+    $cabeceras = "From: sandy.paez@sissamx.com\r\n" .
                  "Reply-To: $email\r\n" .
                  "Content-Type: text/plain; charset=UTF-8";
 

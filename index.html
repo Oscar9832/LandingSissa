@@ -370,20 +370,30 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        const mensaje = document.getElementById("mensaje-exito");
-        mensaje.style.display = "block";
-
+        // Mostrar el toast
+        const toast = document.getElementById("toast");
+        toast.style.display = "block";
         setTimeout(() => {
-          mensaje.style.display = "none";
-        }, 5000);
+          toast.style.opacity = 1;
+          toast.style.transform = "translateY(0)";
+        }, 10);
+
+        // Ocultar después de 4 segundos
+        setTimeout(() => {
+          toast.style.opacity = 0;
+          toast.style.transform = "translateY(30px)";
+          setTimeout(() => {
+            toast.style.display = "none";
+          }, 500);
+        }, 4000);
 
         form.reset();
       } else {
-        alert("Error en el servidor al enviar el formulario.");
+        alert("Error al enviar el formulario. Intenta de nuevo.");
       }
-    } catch (err) {
-      alert("Error de red o servidor no accesible.");
-      console.error(err);
+    } catch (error) {
+      console.error("Error:", error);
+      alert("No se pudo conectar con el servidor.");
     }
   });
 });
@@ -391,5 +401,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </body>
+<div id="toast" style="
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(30px);
+">
+  ✅ Tu mensaje fue enviado correctamente.
+</div>
 
 </html>
