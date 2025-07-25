@@ -12,9 +12,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
         rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
+<body>
 <!-- Header/Navbar -->
 <header class="header">
     <div class="container">
@@ -28,7 +28,7 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">INICIO</a></li>
                     <li class="nav-item"><a href="ecosistema.html" class="nav-link">ECOSISTEMA SISSA</a></li>
-                    
+
                 </ul>
             </nav>
 
@@ -130,7 +130,7 @@
 
                 <div class="sissa-form">
 
-                    <form action="https://block256.com.mx/insert.php" method="POST" id="consultoria-form">
+                    <form id="consultoria-form">
 
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -148,6 +148,9 @@
                             <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">ENVIAR</button>
+                        <div id="mensaje-exito" style="display:none; margin-top: 10px; color: green; font-weight: 600;">
+                            ✅ Tu mensaje fue enviado correctamente.
+                        </div>
                     </form>
                 </div>
                 <p class="form-subtitulo">Y descubre cómo integrar todos los niveles<br>
@@ -167,7 +170,8 @@
             <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#" target="_blank"><i
                     class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/sissa_mx/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/33243655/admin/dashboard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/33243655/admin/dashboard/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
         </div>
 
 
@@ -343,52 +347,49 @@
 
 <div class="image-grid">
     <img src="images/Contacto.png" alt="Imagen de fondo">
-   <button class="grid-button" onclick="window.open('https://wa.me/5610050377?text=Hola%20requiero%20más%20información', '_blank')"></button>
+    <button class="grid-button"
+        onclick="window.open('https://wa.me/5610050377?text=Hola%20requiero%20más%20información', '_blank')"></button>
 
-    
+
 </div>
 <!-- Sección de Contacto -->
 
-<body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("consultoria-form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://block256.com.mx/insert.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        const mensaje = document.getElementById("mensaje-exito");
+        mensaje.style.display = "block";
+
+        setTimeout(() => {
+          mensaje.style.display = "none";
+        }, 5000);
+
+        form.reset();
+      } else {
+        alert("Error en el servidor al enviar el formulario.");
+      }
+    } catch (err) {
+      alert("Error de red o servidor no accesible.");
+      console.error(err);
+    }
+  });
+});
+</script>
+
 
 </body>
-
-
-<section class="contact-section">
-    <div class="container">
-        <h2 class="section-title">Contáctanos:</h2>
-
-        <div class="contact-info">
-            <div class="contact-details">
-                <p class="contact-phone">Teléfono: <a href="tel:+529514091394">+52 (951) 409 1394</p>
-                <p class="contact-email">Email: <a
-                        href="mailto:contacto@sissamonitoring.com">contacto@sissamonitoring.com</a></p>
-            </div>
-
-            <div class="social-media">
-                <h3></h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/people/SISSA-Monitoring-Integral/61563464692904/#" target="_blank"
-                        class="social-icon">
-                        <img src="images//icons/facebook-icon.svg" alt="Facebook">
-                    </a>
-                    <a href="https://www.linkedin.com/company/33243655/admin/dashboard/" target="_blank"
-                        class="social-icon">
-                        <img src="images//icons/linkedin_1419502.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.instagram.com/sissa_mx/" target="_blank" class="social-icon">
-                        <img src="images/icons/instagram_1384063.svg" alt="Instagram">
-                    </a>
-                    <a href="https://x.com/SISSA_MX/" target="_blank" class="social-icon">
-                        <img src="images/icons/twitter_5968830.svg" alt="Twitter/X">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-
 
 </html>
