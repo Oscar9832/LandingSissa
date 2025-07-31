@@ -14,7 +14,7 @@
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .header-content {
@@ -80,15 +80,16 @@
 
 /* Botón hamburguesa */
 .menu-toggle {
-    display: none;
+ display: none;
     font-size: 28px;
     background: none;
     border: none;
     cursor: pointer;
     color: #cc0000;
-    margin-left: auto; /* Empuja el botón hacia la derecha */
-    padding: 5px 10px;  /* Espaciado interno opcional */
-    align-self: center; /* Alineación vertical si hay flexbox */
+    margin-left: auto;
+    margin-right: 20px; /* 👈 mueve el botón hacia la izquierda */
+    padding: 5px 10px;
+    align-self: center;
 }
 
 /* Responsive */
