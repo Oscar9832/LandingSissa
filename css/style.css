@@ -146,18 +146,22 @@ body {
     min-height: 100vh;
     width: 100%;
     padding-top: 90px;
+    min-height: 100vh;
 }
 /* Lado izquierdo (texto) */
 .content {
     width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 3rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* o center si quieres centrar horizontalmente */
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
 }
-
 .content h1,
 .content .subtitle,
 .content .ecosistema {
@@ -266,9 +270,16 @@ h1 {
     background-color: #f9f9f9;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .sissa-content {
     display: flex;
     gap: 30px;
+    align-items: flex-start;
 }
 
 .seguridad {
@@ -293,11 +304,11 @@ h1 {
 
 
 .sissa-text {
-
-    flex: 1;
-    padding: 30px;
     position: relative;
+    padding: 30px;
     margin-top: 100px;
+    min-height: 350px; /* Para que siempre haya espacio para la marca */
+    padding-bottom: 150px; /* Espacio extra abajo para la marca */
 }
 
 .sissa-text h1 {
@@ -397,8 +408,8 @@ h1 {
     font-weight: 900;
     color: #f0f0f0;
     letter-spacing: 5px;
+    pointer-events: none; /* Para que no interfiera con clicks */
 }
-
 .form-title {
     text-align: center;
     font-size: 2rem;
@@ -420,21 +431,72 @@ h1 {
 @media (max-width: 768px) {
     .sissa-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
+        padding: 0 10px;
     }
 
     .sissa-text,
     .sissa-form {
-        width: 100%;
+          background: #2d3748;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px px rgba(173, 22, 22, 0.1);
+    padding-right: 40px; /* Más espacio a la derecha */
+    padding-left: 30px; /* Sin espacio a la izquierda */
     }
 
     .sissa-text h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* un poco más pequeño */
     }
 
-    .sissa-text h3 {
-        font-size: 1.5rem;
+    .sissa-text h1 {
+        font-size: 1.6rem;
+        color: #555;
     }
+
+    .seguridad {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+
+    .subtitle-seguridad {
+        font-size: 18px;
+    }
+
+    .form-title {
+        font-size: 1.6rem;
+    }
+
+    .form-subtitulo {
+        font-size: 0.9rem;
+    }
+
+    /* Input y textarea ancho 100% */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* Ocultar marca de agua en móviles */
+ .marca-agua {
+        font-size: 80px;
+        left: 20px;
+        bottom: 10px;
+    }
+
+/* También puedes agregar un breakpoint para pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .submit-btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .marca-agua {
+        display: none;
+    }
+}
 }
 
 -------------
