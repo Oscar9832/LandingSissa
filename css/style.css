@@ -732,6 +732,84 @@ h1 {
     /* color: #c0392b; */
     /* color: #d63031; */
 }
+@media (max-width: 1024px) {
+  .header-seguridad h1 {
+    font-size: 50px;
+  }
+
+  .grid-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .center-badge {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+    padding: 20px 40px;
+  }
+
+  .social-sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 0;
+    flex-wrap: wrap;
+  }
+
+  .social-sidebar a {
+    margin: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-seguridad h1 {
+    font-size: 36px;
+  }
+
+  .header-seguridad .subtitle {
+    font-size: 14px;
+  }
+
+  .badge,
+  .right-badge {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .badge-text,
+  .right-badge-text {
+    margin: 0;
+  }
+
+  .badge-icon,
+  .right-badge-icon {
+    margin: 0 0 5px 0;
+  }
+
+  .center-badge-title {
+    font-size: 18px;
+  }
+
+  .center-badge-sub,
+  .center-badge-subtitle {
+    font-size: 16px;
+  }
+}
 
 
 /*seccion de guardia*/
