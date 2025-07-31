@@ -603,11 +603,9 @@ h1 {
 }
 
 .grid-container {
- display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin: 0 auto;
-    padding: 0 20px;
     position: relative;
 }
 
@@ -708,6 +706,7 @@ h1 {
     text-align: center;
     width: max-content;
     max-width: 90%;
+     display: block;
 }
 
 .center-badge-title {
@@ -819,7 +818,8 @@ h1 {
 }
 @media (max-width: 768px) {
     .grid-container {
-      grid-template-columns: 1fr;
+      display: flex;
+        flex-direction: column;
     }
     
     .grid-item {
@@ -827,12 +827,13 @@ h1 {
     }
     
     .center-badge {
-      position: relative;
-        margin: 40px auto;
+      position: static;
+        order: -1; /* Lo coloca al principio */
         transform: none;
-        top: auto;
-        left: auto;
-        white-space: normal;
+        margin: 0 auto 30px auto;
+        width: 90%;
+        max-width: 500px;
+
     }
     .center-badge-title {
         white-space: normal;
