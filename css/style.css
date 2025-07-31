@@ -85,6 +85,9 @@
     border: none;
     cursor: pointer;
     color: #cc0000;
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    padding: 5px 10px;  /* Espaciado interno opcional */
+    align-self: center; /* Alineación vertical si hay flexbox */
 }
 
 /* Responsive */
