@@ -955,8 +955,47 @@ h1 {
 
 /* RESPONSIVE ADICIONAL (opcional para mejor experiencia en móviles) */
 @media (max-width: 768px) {
-    .fullscreen-img img {
-        object-fit: contain;
+    .contenedor {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+        gap: 2rem; /* Reduce el espacio entre elementos */
+    }
+    
+    .columna:first-child, 
+    .columna:last-child {
+        flex: 1 1 100%; /* Ocupa todo el ancho */
+        min-width: auto; /* Elimina el mínimo width */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+    
+    /* Ajustes para la imagen en móvil */
+    .imagen {
+        order: 2; /* Coloca la imagen después (order 2 vs order 1 por defecto) */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .imagen img {
+        width: 80%; /* Reduce el ancho de la imagen en móvil */
+        max-width: 100%; /* Permite que crezca hasta el 100% */
+    }
+    
+    /* Ajustes para el texto en móvil */
+    .texto {
+        order: 1; /* Coloca el texto primero */
+        text-align: center; /* Centra el texto en móvil */
+    }
+    
+    .texto h2 {
+        font-size: 2rem; /* Reduce tamaño en móvil */
+    }
+    
+    .texto h1 {
+        font-size: 2.2rem; /* Reduce tamaño en móvil */
+    }
+    
+    .texto p {
+        font-size: 1.1rem; /* Reduce tamaño en móvil */
     }
 }
 
