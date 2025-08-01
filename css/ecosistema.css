@@ -102,66 +102,63 @@
 
 /* Versión móvil */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    .main-nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        background: white;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        border-radius: 5px;
-        padding: 15px;
-        width: auto;
-    }
-    
-    .main-nav.open {
-        display: block;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-end; /* Alinea a la derecha */
-    }
-    
-    .nav-item {
-        margin: 10px 0;
-    }
-    
-     .header {
-        height: 70px; /* Reduzco ligeramente la barra en móvil */
-    }
-    .logo-img {
-        height: 60px;
-    }
-    @media (max-width: 480px) {
-    .header {
-        height: 65px;
-    }
-    .logo-img {
-        height: 55px;
-    }
-}
-@media (min-width: 769px) {
-    .main-nav {
-        display: flex !important; /* Reestablece display flex */
-        position: static;
-        box-shadow: none;
-        padding: 0;
-    }
+  .container {
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
 
-    .nav-list {
-        flex-direction: row;
-        align-items: center;
-    }
-}
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    order: 2; /* Para que esté al final */
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    position: static;
+    background: white;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10px 0;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin: 10px 20px;
+  }
+
+  .header-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .logo-container {
+    order: 1;
+  }
+
+  .main-nav {
+    order: 3; /* Aparece debajo */
+  }
+
+  .header {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
 }
 /* Sección Seguridad que piensa */
 .seguridad-section {
