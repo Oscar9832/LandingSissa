@@ -1,162 +1,95 @@
-/* Estilos base del header */
 .header {
-  background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 0; /* Altura fija de la barra */
-    height: 80px; /* Altura total fija del header */
-    display: flex;
-    align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .container {
-    width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
-    padding: 0 40px;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Contenedor flexible */
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Fila con logo + botón */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
 }
 
-/* Logo (siempre a la izquierda) */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
+/* Estilo del logo */
 .logo-img {
-    height: 70px; /* Aumenté el tamaño del logo */
-    width: auto;
-    max-height: 100%; /* No superará la altura del header */
-    transition: all 0.3s ease;
+  height: 60px;
 }
 
-.logo:hover .logo-img {
-    transform: scale(1.05);
-    opacity: 0.9;
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #cc0000;
+  cursor: pointer;
 }
 
-/* Menú (siempre a la derecha) */
+/* Menú de navegación */
 .main-nav {
-    display: flex;
-    margin-left: auto; /* Empuja el menú a la derecha */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-item {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .nav-link {
-    color: #cc0000;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 5px 0;
-    position: relative;
-    transition: color 0.3s ease;
-    white-space: nowrap;
+  color: #cc0000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #cc0000;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* Botón hamburguesa (solo móvil) */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #cc0000;
-    font-size: 28px;
-    cursor: pointer;
-    margin-left: 20px;
-    order: 1; /* Coloca después del logo */
-}
-
-/* Versión móvil */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .header {
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .header-content {
-    display: flex;
-    flex-direction: row; /* Logo y botón en la misma línea */
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .logo-img {
-    height: 60px;
-  }
-
   .menu-toggle {
     display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #cc0000;
-    cursor: pointer;
-    margin-right: 10px;
   }
 
   .main-nav {
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    background: white;
-    padding: 10px 20px;
-    box-shadow: none;
-    position: static;
+    padding: 10px 0;
   }
 
   .main-nav.open {
-    display: block;
+    display: flex;
   }
 
   .nav-list {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    margin: 0;
+    width: 100%;
   }
 
   .nav-item {
-    margin: 10px 0;
+    margin: 10px 20px;
+  }
+
+  .top-bar {
+    height: auto;
   }
 }
 
