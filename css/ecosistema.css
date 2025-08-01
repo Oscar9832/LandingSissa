@@ -126,12 +126,12 @@
 
   .menu-toggle {
     display: block;
-    margin-right: 10px;
     font-size: 28px;
     background: none;
     border: none;
     color: #cc0000;
     cursor: pointer;
+    margin-right: 10px;
   }
 
   .main-nav {
