@@ -18,25 +18,30 @@
 </head>
 
 <body>
-    <!-- Header/Navbar -->
-    <header class="header">
-        <div class="">
-            <div class="logo-container">
-                <a href="index.html" class="logo">
-                    <img src="images/icons/logo.svg" alt="SISSA Logo">
-                </a>
+ <body>
+        <!-- Header/Navbar -->
+        <header class="header">
+            <div class="container header-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="images/icons/logo.svg" alt="SISSA Logo" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <button class="menu-toggle" id="menu-toggle">&#9776;</button>
 
                 <!-- Menú de navegación -->
-                <nav class="main-nav">
+                <nav class="main-nav" id="main-nav">
                     <ul class="nav-list">
                         <li class="nav-item"><a href="index.html" class="nav-link">INICIO</a></li>
                         <li class="nav-item"><a href="ecosistema.html" class="nav-link">ECOSISTEMA SISSA</a></li>
                     </ul>
                 </nav>
             </div>
-        </div>
-    </header>
-
+        </header>
+    </body>
     <!-- Sección "Seguridad que piensa" -->
     <section class="seguridad-section">
         <div class="seguridad-container">
@@ -285,6 +290,34 @@ cada desarollo esta enfocado en fortalecer la operacion, brindar la informacion 
             <a href="https://www.linkedin.com/company/33243655/admin/dashboard/" target="_blank"><i
                     class="fab fa-linkedin"></i></a>
         </div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '&#9776;';
+    menuToggle.id = 'menu-toggle';
+    
+    const logoContainer = document.querySelector('.logo-container');
+    logoContainer.appendChild(menuToggle);
+    
+    const mainNav = document.querySelector('.main-nav');
+    
+    menuToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+    });
+    
+    // Cerrar menú al hacer clic en un enlace (opcional)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                mainNav.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
 
 </body>
 
