@@ -1014,3 +1014,39 @@ h1 span {
     height: 40px;
 }
 
+/*imagenes*/
+
+.full-screen-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.full-screen-image {
+    width: 100%;
+    height: auto; /* Altura automática para mantener proporción */
+    display: block;
+    object-fit: contain; /* Muestra toda la imagen sin recortar */
+    object-position: center;
+}
+
+/* Ajustes para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+    .full-screen-container {
+        padding: 0 20px; /* Espacio lateral en pantallas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .full-screen-container {
+        padding: 0 15px; /* Menos espacio en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .full-screen-container {
+        padding: 0 10px; /* Mínimo espacio en móviles */
+    }
+}
