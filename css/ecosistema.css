@@ -108,9 +108,10 @@
   }
 
   .menu-toggle {
-    display: block;
-    margin-left: auto;
-    order: 2; /* Para que esté al final */
+  display: block;
+  margin-left: auto;
+  order: 2;
+  align-self: center;
   }
 
   .main-nav {
@@ -138,9 +139,11 @@
   }
 
   .header-content {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* <- IMPORTANTE */
+  width: 100%;
   }
 
   .logo-container {
@@ -148,12 +151,12 @@
   }
 
   .main-nav {
-    order: 3; /* Aparece debajo */
+     width: 100%;
   }
 
   .header {
-    height: auto;
-    padding-bottom: 0;
+     height: auto; /* que no se fije altura en móvil */
+  flex-direction: column;
   }
 
   .logo-img {
