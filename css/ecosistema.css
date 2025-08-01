@@ -108,8 +108,9 @@
   }
 
   .menu-toggle {
+display: block; /* <- ESTA es la clave */
   align-self: flex-end;
-  margin-right: 20px; /* separa del borde derecho */
+  margin-right: 20px;
   margin-bottom: 10px;
   font-size: 28px;
   background: none;
@@ -155,9 +156,6 @@
   margin-bottom: 10px;
 }
 
-  .main-nav {
-     width: 100%;
-  }
 
   .header {
      height: auto; /* que no se fije altura en móvil */
