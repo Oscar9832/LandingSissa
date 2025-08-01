@@ -149,6 +149,19 @@
         height: 55px;
     }
 }
+@media (min-width: 769px) {
+    .main-nav {
+        display: flex !important; /* Reestablece display flex */
+        position: static;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        align-items: center;
+    }
+}
 }
 /* Sección Seguridad que piensa */
 .seguridad-section {
