@@ -1044,11 +1044,37 @@ h1 span {
     text-align: center;
     height: 40px;
 }
-
+.social-sidebar a:hover {
+    transform: scale(1.1);
+}
+/* RESPONSIVE - MANTIENE POSICIÓN EN TODOS LOS DISPOSITIVOS */
+@media (max-width: 768px) {
+    .social-sidebar {
+        padding: 6px 3px;
+        border-radius: 0 15px 15px 0;
+        gap: 6px;
+    }
+    
+    .social-sidebar a {
+        font-size: 14px;
+        padding: 5px 7px;
+    }
+}
+@media (max-width: 480px) {
+    .social-sidebar {
+        border-radius: 0 30px 30px 0;
+        padding: 6px 3px;
+    }
+    
+    .social-sidebar a {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
 /*imagenes*/
 
 .full-screen-container {
-    width: 100%;
+    width: 75%;
     max-width: 100%;
     overflow: hidden;
     position: relative;
