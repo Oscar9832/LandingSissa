@@ -138,14 +138,14 @@
 /* Sección Seguridad que piensa */
 .seguridad-section {
     width: 100%;
-    padding: 100px 20px;
+    padding: 150px 50px;
     background: #fff;
     box-sizing: border-box;
 }
 
 .seguridad-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     text-align: center;
 }
@@ -175,12 +175,12 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin: 40px auto 0;
-    max-width: 900px;
-    line-height: 1.6;
+    max-width: 1200px;
+    line-height: 1.8;
 }
 
 .desc strong {
-    font-weight: 700;
+    font-weight: 800;
     color: #333;
 }
 
@@ -324,7 +324,7 @@
 
 .subtitle {
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #666666;
     font-weight: 400;
     margin-top: 28px;
@@ -432,6 +432,7 @@
 }
 
 .highlight-red {
+  font-family: 'Montserrat', Arial, sans-serif;
     background: #c8232a;
     color: #fff;
     font-weight: 700;
@@ -443,6 +444,7 @@
 }
 
 .text {
+  font-family: 'Montserrat', Arial, sans-serif;
     color: #6d6d6d;
     font-size: 1.5rem;
     margin: 10px 0 0 0;
@@ -451,11 +453,13 @@
 }
 
 .text-bold {
+  font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     color: #c8232a;
 }
 
 .highlight-red2 {
+  font-family: 'Montserrat', Arial, sans-serif;
     background: #c8232a;
     color: #fff;
     font-weight: 700;
@@ -467,6 +471,7 @@
 }
 
 .text-small {
+  font-family: 'Montserrat', Arial, sans-serif;
     color: #6d6d6d;
     font-size: 1.3rem;
     margin: 8px 0 0 0;
@@ -634,13 +639,13 @@ display: flex;
     }
     .desc-box {
       background: #fff;
-      border-radius: 48px;
+      border-radius: 50px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.15);
       margin-top: 32px;
       padding: 32px 48px 28px 48px;
-      max-width: 900px;
+      max-width: 1000px;
       text-align: center;
-      z-index: 2;
+      z-index: 3;
       position: relative;
     }
     .desc-box strong, .desc-box b {
@@ -710,6 +715,7 @@ display: flex;
       
     }
     .title {
+      font-family: 'Montserrat', Arial, sans-serif;
       color: #c20017;
       font-size: 32px;
       font-weight: 700;
@@ -726,6 +732,7 @@ display: flex;
       letter-spacing: 0.1px;
     }
     .content p.bold {
+      font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 600;
       color: #555;
       font-size: 24px;
@@ -733,6 +740,7 @@ display: flex;
       margin-top: 0;
     }
     .content p.result {
+      font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 700;
       color: #555;
       font-size: 22px;
@@ -847,6 +855,7 @@ h1 span {
 
 /* Lista de beneficios */
 .lista-beneficios {
+  font-family: 'Montserrat', Arial, sans-serif;
   list-style: none;
   padding: 0;
 }
@@ -857,6 +866,7 @@ h1 span {
 }
 
 .lista-beneficios li::before {
+  font-family: 'Montserrat', Arial, sans-serif;
   content: "•";
   color: #aa0000;
   display: inline-block;
@@ -906,7 +916,7 @@ h1 span {
 .texto-consultoria {
   max-width: 600px;
   text-align: right;
-  margin-right: 30px;
+  margin-right: 80px;
   margin-top: 10px;
 }
 
@@ -1106,4 +1116,26 @@ h1 span {
     .full-screen-container {
         padding: 0 10px; /* Mínimo espacio en móviles */
     }
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: #25d366;
+  color: white;
+  font-size: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
 }
