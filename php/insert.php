@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 
     // Enviar correo
-    $destinatario = "oscar.viloria@block256.com.mx"; // ← Cambia esto por tu correo real
+    $destinatario = "contacto@sissamx.com"; 
     $asunto = "Nueva solicitud de contacto";
     $contenido = "
         Has recibido una nueva solicitud desde el formulario:
