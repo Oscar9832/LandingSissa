@@ -465,40 +465,29 @@ h1 {
     .container {
         padding: 0 15px; /* Asegurar que el contenedor principal también tenga padding reducido */
     }
-}
-@media (max-width: 480px) {
-  .container {
-    padding: 0 16px; /* margen interno a toda la sección */
-  }
-
-  .form-container {
-    max-width: 100%;
-    padding: 0 8px;
-  }
-
+}@media (max-width: 480px) {
   .sissa-form {
-    max-width: 100%;
-    padding: 16px;
-    background-color: #2d3748;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #2d3748; /* fondo oscuro */
     border-radius: 8px;
     box-shadow: none;
   }
 
   .form-group input,
   .form-group textarea {
-    font-size: 0.9rem;
-    padding: 10px;
-    border-radius: 6px;
-    color: #ffffff;
-    background-color: #1f2733;
+    font-size: 0.85rem;
+    padding: 8px 10px;
     border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
+    border-radius: 4px;
+    color: #fff; /* texto visible */
+    background-color: #1f2733; /* más oscuro aún para contraste */
   }
 
   .form-group input::placeholder,
   .form-group textarea::placeholder {
-    color: #cccccc;
+    color: #ccc; /* placeholder claro pero visible */
   }
 
   .form-group {
@@ -510,25 +499,26 @@ h1 {
     padding: 10px;
     background-color: #b10e0e;
     color: white;
-    border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     width: 100%;
+    border: none;
   }
 
   .form-title {
-    font-size: 1.1rem;
-    text-align: center;
+    font-size: 1.2rem;
     margin-bottom: 12px;
+    text-align: center;
     color: #000;
   }
 
   .form-subtitulo {
     font-size: 0.85rem;
-    text-align: center;
     color: #444;
-    margin-top: 12px;
+    text-align: center;
   }
 }
+
+
 
 @media (max-width: 360px) {
     .marca-agua {
