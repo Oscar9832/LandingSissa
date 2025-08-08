@@ -1030,13 +1030,13 @@ h1 {
 /* Para pantallas pequeñas */
 @media (max-width: 480px) {
     .full-screen-image {
-        max-width: 95%; /* reduce el tamaño de la imagen al 90% */
+        max-width: 90%; /* reduce el tamaño de la imagen al 90% */
     }
 }
 
 @media (max-width: 360px) {
     .full-screen-image {
-        max-width: 90%; /* aún más pequeña para móviles muy pequeños */
+        max-width: 85%; /* aún más pequeña para móviles muy pequeños */
     }
 }
 
