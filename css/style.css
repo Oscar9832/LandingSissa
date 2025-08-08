@@ -2396,19 +2396,45 @@ body {
 }
 
 /* Posición absoluta del botón dentro de la imagen */
-.boton-wpp {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centra el botón */
-  width: 100px;
-  height: 100px;
-  z-index: 2;
-  background-image: url('images/whatsapp-icon.png'); /* si usas un ícono de fondo */
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.contenedor-wpp-img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
 }
 
+/* Imagen escala automáticamente */
+.imagen-contacto {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botón posicionado dentro de la imagen */
+.boton-wpp {
+  position: absolute;
+  top: 35%; /* O ajústalo al lugar exacto donde va */
+  left: 85%; /* Esto es muy importante: ajústalo hasta que quede justo sobre el ícono verde */
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  background-image: url('images/whatsapp-icon.png'); /* si no tienes, solo haz background-color para depurar */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Tamaño más pequeño en móviles */
+@media (max-width: 768px) {
+  .boton-wpp {
+    width: 60px;
+    height: 60px;
+    left: 85%; /* Puedes moverlo más si cambia el layout */
+    top: 52%;
+  }
+}
 /* Ajustes para móvil */
 @media (max-width: 800px) {
   .boton-wpp {
