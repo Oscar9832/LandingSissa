@@ -10,6 +10,9 @@
   height: 80px;
   width: 100%;
 }
+body {
+  padding-top: 80px; /* o igual a la altura del header */
+}
 
 .container {
   max-width: 1100px;
@@ -28,8 +31,9 @@
 /* Logo */
 .logo-container {
    display: flex;
-  align-items: center; /* sube el logo */
-  padding-top: 0 /* separa un poco del borde */
+  align-items: center; /* Centrado vertical */
+  padding-top: 0;
+  flex: 1; /* <- permite que el logo use solo el espacio necesario */
 }
 
 .logo-img {
@@ -62,7 +66,7 @@
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #2d004d;
+  color: #cc0000;
   font-weight: bold;
 }
 
@@ -83,12 +87,13 @@
 
 /* Botón hamburguesa */
 .menu-toggle {
-  display: none;
+ display: block;
   font-size: 28px;
   background: none;
   border: none;
   color: #cc0000;
   cursor: pointer;
+  margin-left: auto; /* <- empuja el botón hacia la derecha */
 }
 
 /* --- Responsive --- */
@@ -105,7 +110,7 @@
   }
 
   .menu-toggle {
-    display: block;
+     display: block !important;
   }
 
   .main-nav {
@@ -149,6 +154,9 @@
     padding: 0 20px;
     height: 100px;
   }
+  body {
+    padding-top: 100px; /* o la altura real en móvil */
+  }
 
   /* Logo más visible y más arriba */
   .logo-img {
@@ -169,6 +177,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+    .menu-toggle {
+    display: none !important;
   }
 }
 
