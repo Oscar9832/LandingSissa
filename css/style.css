@@ -397,6 +397,17 @@ h1 {
     margin-bottom: 1.5rem;
     color: #353434b8;
 }
+/* Ajusta color de texto y placeholder dentro de los inputs del formulario */
+.form-group input,
+.form-group textarea {
+  color: #000 !important; /* Texto negro */
+  background-color: #ffffff !important; /* Fondo blanco para contraste */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777 !important; /* Placeholder más oscuro (gris medio) */
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
