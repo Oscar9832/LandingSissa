@@ -457,7 +457,9 @@ h1 {
         bottom: 10px;
     }
      .sissa-form {
-        padding: 20px 15px; /* Reducir padding en móviles */
+        padding: 20px 15px; 
+        max-width: 90%;
+    margin: 0 auto;/* Reducir padding en móviles */
     }
     
     .container {
@@ -501,12 +503,17 @@ h1 {
     }
     
     .sissa-form {
-        padding: 20px;
+        padding: 15px;
+        max-width: 95%; 
     }
     
     .marca-agua {
         font-size: 50px;
     }
+      .submit-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -519,9 +526,13 @@ h1 {
     
     .form-group input, 
     .form-group textarea {
-        padding: 10px 12px; /* Reducir padding de los inputs */
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    padding: 10px 12px; /* Reducir padding de los inputs */
+    min-height: 80px;
     }
 }
+
 -------------
 /* Sección OFRECEMOS */
 
