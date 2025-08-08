@@ -1647,6 +1647,12 @@ h1 {
   width: 100%;
   box-sizing: border-box;
 }
+.nosotros h1,
+.titulo-principal,
+.bloque-mensaje p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .nosotros h1 {
   margin: 0;
@@ -1654,6 +1660,7 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -1858,12 +1865,15 @@ background-color: #c00;
 .caja-flexible {
   width: 100%;
   max-width: 1600px;
-  padding: 30px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 40px; /* Espacio entre elementos */
+  margin-bottom: 0;
+  padding-bottom: 0;
+    background: rgba(255, 0, 0, 0.1); /* rojo claro */
 }
 
 /* Imagen grande y centrada */
@@ -1980,14 +1990,22 @@ background-color: #c00;
 /*mapa */
 
 .seccion-presencia {
+  width: 100%; /* En lugar de 100vw */
+  min-height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  min-height: 100vh;
+  padding: 0 2vw; /* Opcional para dar un pequeño margen horizontal */
+  box-sizing: border-box;
+   margin-top: 0 !important;
+  padding-top: 0 !important;
+    background: rgba(0, 255, 0, 0.1); /* verde claro */
 }
-
+.columna-mapa,
+.columna-texto {
+  margin-top: 0 !important;
+}
 /* Columna izquierda: Mapa */
 .columna-mapa {
   flex: 1.2;
@@ -1995,6 +2013,7 @@ background-color: #c00;
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
+  margin-top: -80px;
 }
 
 .contenedor-mapa {
@@ -2006,12 +2025,16 @@ background-color: #c00;
   align-items: center;
  
 }
+.columna-mapa,
+.columna-texto {
+  margin-top: 0;
+}
 
 .imagen-mapa {
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   height: auto;
-  margin: 50px auto;
+  margin: 20px auto;
   display: block;
   transform: none; /* Elimina translateX para evitar desplazamiento forzado */
 }
@@ -2051,9 +2074,10 @@ background-color: #c00;
   flex-direction: column;
   justify-content: center; /* Centra verticalmente */
   align-items: center;
-  padding: 60px 4vw 0 4vw; /* Espacio superior opcional */
+  padding: 20px 2vw 0 2vw; /* Espacio superior opcional */
   height: auto;
   text-align: center;
+  margin-top: 0;
 }
 
 .bloque-mensaje {
@@ -2068,6 +2092,8 @@ max-width: 700px;
   color: #191919;
   line-height: 1.1;
   letter-spacing: 0.01em;
+   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .mensaje-destacado {
