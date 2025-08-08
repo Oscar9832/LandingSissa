@@ -468,33 +468,34 @@ h1 {
 }
 @media (max-width: 480px) {
   .sissa-form {
-    max-width: 92%;
+    max-width: 90%; /* Un poco menos ancho para dejar espacio a los lados */
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px; /* Más padding para que no quede pegado */
     border-radius: 6px;
+    box-sizing: border-box; /* Para que el padding no aumente el ancho */
   }
 
   .form-group {
-    margin-bottom: 8px;
+    margin-bottom: 12px; /* Un poco más de espacio entre campos */
   }
 
   .form-group input,
   .form-group textarea {
     font-size: 0.8rem;
-    padding: 6px 10px;
+    padding: 8px 12px; /* Más padding interno para que el input se vea más cómodo */
     border-radius: 4px;
-    color: #000; /* texto negro */
-    background-color: #fff; /* fondo blanco */
+    color: #000; 
+    background-color: #fff;
   }
 
   .form-group input::placeholder,
   .form-group textarea::placeholder {
-    color: #777; /* placeholder más oscuro para legibilidad */
+    color: #777;
   }
 
   .submit-btn {
     font-size: 0.85rem;
-    padding: 10px 12px;
+    padding: 12px 16px;
     width: 100%;
   }
 
@@ -502,29 +503,29 @@ h1 {
   .form-subtitulo {
     font-size: 0.9rem;
     text-align: center;
-    margin: 10px 0;
+    margin: 15px 0;
   }
 
   .container {
-    padding: 0 10px;
+    padding: 0 15px; /* Más espacio en los laterales */
   }
 }
 
 @media (max-width: 360px) {
   .sissa-form {
-    padding: 8px;
-    max-width: 95%;
+    padding: 15px; /* Más padding para que no quede tan pegado */
+    max-width: 92%;
   }
 
   .form-group input,
   .form-group textarea {
     font-size: 0.75rem;
-    padding: 6px 8px;
+    padding: 8px 10px;
   }
 
   .submit-btn {
     font-size: 0.8rem;
-    padding: 8px 12px;
+    padding: 10px 14px;
   }
 
   .form-title,
@@ -532,7 +533,6 @@ h1 {
     font-size: 0.85rem;
   }
 }
-
 
 -------------
 /* Sección OFRECEMOS */
