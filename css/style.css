@@ -483,6 +483,9 @@ h1 {
     padding: 8px 10px;
     border-radius: 4px;
   }
+  .container {
+    padding: 0 12px;
+  }
 }
 @media (max-width: 360px) {
   .sissa-form {
