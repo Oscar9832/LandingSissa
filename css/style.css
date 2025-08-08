@@ -1998,7 +1998,7 @@ background-color: #c00;
   padding: 0 2vw;
   box-sizing: border-box;
   min-height: unset;
-    background: rgba(0, 255, 0, 0.1); /* verde claro */
+  
 }
 .columna-mapa,
 .columna-texto {
