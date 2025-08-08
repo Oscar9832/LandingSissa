@@ -2356,7 +2356,7 @@ body {
   height: 120px;
   cursor: pointer;
   z-index: 2;
-   background-color: rgba(0, 255, 0, 0.3); /* Quita esto al final */
+  /* background-color: rgba(0, 255, 0, 0.3); /* Quita esto al final */
   /* Para depuración, puedes activar el color temporalmente */
   /*background-color: rgba(0, 255, 0, 0.3); */
 }
