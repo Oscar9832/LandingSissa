@@ -1196,13 +1196,13 @@ h1 span {
   }
 
   .contenido-imagenes {
-    justify-content: center; /* Centrar imágenes horizontalmente */
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .tarjeta-imagen {
-    margin: 0 10px; /* espacio entre imágenes */
-    max-width: 45%; /* para que no ocupen todo el ancho */
+    margin: 10px 0; /* Espacio vertical entre imágenes */
+    max-width: 90%;  /* Ancho más amplio para imagen individual */
   }
 
   .tarjeta-imagen img {
