@@ -2432,7 +2432,7 @@ body {
     width: 60px;
     height: 60px;
     left: 85%; /* Puedes moverlo más si cambia el layout */
-    top: 52%;
+    top: 35%;
   }
 }
 /* Ajustes para móvil */
@@ -2442,15 +2442,7 @@ body {
     height: 70px;
   }
 }
-@media (max-width: 800px) {
-  .boton-wpp {
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 80px;
-  }
-}
+
 @media (min-width: 1100px) {
   .imagen-contacto-vbn {
     max-width: 120%;
@@ -2505,13 +2497,6 @@ body {
         font-size: 1rem;
     }
 }
-@media (max-width: 800px) {
-  .boton-wpp {
-    top: 60%;         /* Baja más el botón */
-    right: 12%;       /* Ajusta horizontalmente */
-    width: 80px;      /* Más pequeño en móvil */
-    height: 80px;
-  }
-}
+
 
 /*whatsapp*/
