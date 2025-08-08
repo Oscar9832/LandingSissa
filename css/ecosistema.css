@@ -28,8 +28,8 @@
 /* Logo */
 .logo-container {
    display: flex;
-  align-items: flex-start; /* sube el logo */
-  padding-top: 5px; /* separa un poco del borde */
+  align-items: center; /* sube el logo */
+  padding-top: 0 /* separa un poco del borde */
 }
 
 .logo-img {
