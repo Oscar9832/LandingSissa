@@ -1180,6 +1180,44 @@ h1 span {
   }
 }
 
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column; /* De lado a lado a vertical */
+    width: 90%; /* Más espacio a los lados */
+    margin: 30px auto;
+    padding: 0 10px; /* Espacio interno lateral */
+  }
+
+  .contenido-texto,
+  .contenido-imagenes {
+    width: 100%; /* Que ocupen todo el ancho disponible */
+    padding: 0;
+    text-align: center;
+  }
+
+  .contenido-imagenes {
+    justify-content: center; /* Centrar imágenes horizontalmente */
+    margin-top: 20px;
+  }
+
+  .tarjeta-imagen {
+    margin: 0 10px; /* espacio entre imágenes */
+    max-width: 45%; /* para que no ocupen todo el ancho */
+  }
+
+  .tarjeta-imagen img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2em; /* más pequeño para móvil */
+  }
+
+  .lista-beneficios li {
+    font-size: 1em;
+  }
+}
 
 /*redes sociales*/
 
