@@ -1008,6 +1008,58 @@ h1 span {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+@media (max-width: 768px) {
+  .contenedor-cabecera {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .fondo-sissa {
+    font-size: 60px;
+    top: 20px;
+    left: 0;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contenido-consultoria {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 0;
+  }
+
+  .texto-consultoria {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .texto-consultoria h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    word-break: break-word; /* Evita que palabras largas se desborden */
+  }
+
+  .icono-whatsapp {
+    margin-top: 20px;
+    margin-right: 0;
+    width: 70px;
+    height: 70px;
+  }
+
+  .icono-whatsapp img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
 /* Pie de página */
 .barra-pie {
   width: 100%;
