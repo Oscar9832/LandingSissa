@@ -466,55 +466,44 @@ h1 {
         padding: 0 15px; /* Asegurar que el contenedor principal también tenga padding reducido */
     }
 }
-
 @media (max-width: 480px) {
-    .sissa-section {
-        padding: 40px 0;
-    }
-    
-    .sissa-text {
-        padding: 20px;
-        padding-bottom: 70px;
-    }
-    
-    .seguridad {
-        font-size: 22px;
-        line-height: 1.2;
-    }
-    
-    .subtitle-seguridad {
-        font-size: 18px;
-    }
-    
-    .sissa-text h1 {
-        font-size: 20px;
-    }
-    
-    .sissa-text h2 {
-        font-size: 1.4rem;
-    }
-    
-    .form-title {
-        font-size: 1.3rem;
-    }
-    
-    .form-subtitulo {
-        font-size: 0.9rem;
-    }
-    
-    .sissa-form {
-        padding: 15px;
-        max-width: 95%; 
-    }
-    
-    .marca-agua {
-        font-size: 50px;
-    }
-      .submit-btn {
-    font-size: 0.95rem;
-    padding: 10px 20px;
+  .sissa-form {
+    padding: 10px;
+    max-width: 92%;
+    margin: 0 auto;
+    box-shadow: none; /* Opcional: quitar sombra para hacerlo más limpio */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .submit-btn {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-subtitulo {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  .form-group textarea {
+    min-height: 70px;
   }
 }
+
 
 @media (max-width: 360px) {
     .marca-agua {
