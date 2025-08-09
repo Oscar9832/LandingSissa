@@ -43,6 +43,7 @@ body {
 .logo-img {
    height: 60px; /* antes 60px */
   width: auto;
+  border: 1px solid blue;
 }
 
 .logo:hover {
@@ -101,7 +102,9 @@ display: none;
   margin: 0;
   height: 60px;
   display: flex;
-  align-items: center;}
+  align-items: center;
+  border: 1px solid red;
+}
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
