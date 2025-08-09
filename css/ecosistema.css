@@ -23,10 +23,11 @@ body {
 }
 
 .header-content {
-  display: flex;
+ display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 /* Logo */
@@ -94,7 +95,6 @@ body {
   border: none;
   color: #cc0000;
   cursor: pointer;
-  margin-left: auto; /* <- empuja el botón hacia la derecha */
 }
 
 /* --- Responsive --- */
@@ -124,7 +124,12 @@ body {
     padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
-
+.logo-container {
+    flex: 1;                 /* permite alinear junto al botón */
+  }
+  .header-content {
+    padding: 0 15px;         /* espacio interno del contenedor */
+  }
   .main-nav.open {
     display: flex;
   }
@@ -140,6 +145,20 @@ body {
 
   .logo-img {
     height: 50px;
+  }
+   .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .main-nav.open {
+    display: flex;
   }
 }
 
