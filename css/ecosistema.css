@@ -28,6 +28,8 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+  gap: 10px;
+
 }
 
 /* Logo */
@@ -89,12 +91,15 @@ body {
 
 /* Botón hamburguesa */
 .menu-toggle {
- display: none;
+display: none;
   font-size: 28px;
   background: none;
   border: none;
   color: #cc0000;
   cursor: pointer;
+  align-self: center;  /* ✅ Alinea verticalmente en el flex container */
+  padding: 0;           /* ✅ Elimina espacio interno innecesario */
+  margin: 0;            /* ✅ Elimina margen que puede desalinear */
 }
 
 /* --- Responsive --- */
