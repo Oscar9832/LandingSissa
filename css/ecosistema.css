@@ -97,10 +97,11 @@ display: none;
   border: none;
   color: #cc0000;
   cursor: pointer;
-  align-self: center;  /* ✅ Alinea verticalmente en el flex container */
-  padding: 0;           /* ✅ Elimina espacio interno innecesario */
-  margin: 0;            /* ✅ Elimina margen que puede desalinear */
-}
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;}
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
