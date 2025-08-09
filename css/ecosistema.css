@@ -17,8 +17,9 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
   width: 100%;
+  padding: 0 20px;
+  
 }
 
 .header-content {
@@ -32,12 +33,12 @@ body {
 .logo-container {
    display: flex;
   align-items: center; /* Centrado vertical */
-  padding-top: 0;
+ 
   flex: 1; /* <- permite que el logo use solo el espacio necesario */
 }
 
 .logo-img {
-   height: 80px; /* antes 60px */
+   height: 60px; /* antes 60px */
   width: auto;
 }
 
@@ -87,7 +88,7 @@ body {
 
 /* Botón hamburguesa */
 .menu-toggle {
- display: block;
+ display: none;
   font-size: 28px;
   background: none;
   border: none;
@@ -99,21 +100,17 @@ body {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .header {
-    height: auto;
-    padding: 10px 0;
+    height: 70px;
   }
 
-  .header-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-     padding: 0 15px; 
+  .container {
+    padding: 0 15px;
   }
 
   .menu-toggle {
     display: block !important;
-    margin-right: 10px;         /* separa del borde derecho */
-    align-self: center;         /* alinea verticalmente */
+    align-self: center;
+    margin-right: 5px;
   }
 
   .main-nav {
@@ -122,7 +119,7 @@ body {
     width: 100%;
     background-color: #fff;
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 0;
     padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -144,6 +141,12 @@ body {
   .logo-img {
     height: 50px;
   }
+}
+
+
+/* Compensar el header fijo */
+body {
+  padding-top: 80px;
 }
 /* Solo escritorio */
 @media (min-width: 769px) {
