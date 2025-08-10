@@ -7,7 +7,6 @@
   position: fixed;
   top: 0;
   z-index: 1000;
-  height: 80px;
   width: 100%;
 }
 body {
@@ -26,22 +25,20 @@ body {
  display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  gap: 10px;
-
+  height: 70px;
+  padding: 0 20px;
+  max-width: 1100px;
+  margin: 0 auto; 
 }
 
 /* Logo */
 .logo-container {
-   display: flex;
-  align-items: center; /* Centrado vertical */
- 
-  flex: 1; /* <- permite que el logo use solo el espacio necesario */
-}
+  display: flex;
+  align-items: center;
+} 
 
 .logo-img {
-   height: 60px; /* antes 60px */
+  height: 50px;
   width: auto;
   border: 1px solid blue;
 }
@@ -50,6 +47,25 @@ body {
   transform: scale(1.1);
   opacity: 0.9;
 }
+.logo-menu-container {
+  display: flex;
+  align-items: center;       /* centra verticalmente */
+  justify-content: space-between; /* separa elementos a los extremos */
+  padding: 0 20px;           /* espacio a los lados, opcional */
+  width: 250px;              /* ancho fijo o ajustable al tamaño deseado */
+}
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cc0000;
+  margin-top: -20px;
+}
+.logo-img {
+  height: 60px; /* ajusta al tamaño que quieras */
+}
+
 
 /* Menú */
 .main-nav {
@@ -92,35 +108,34 @@ body {
 
 /* Botón hamburguesa */
 .menu-toggle {
-display: none;
+ display: none;
   font-size: 28px;
   background: none;
   border: none;
   color: #cc0000;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
-  height: 60px;
+
   display: flex;
   align-items: center;
-  transform: translateY(2px);
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border: 1px solid red;
 }
 
-/* --- Responsive --- */
+/* Agrupa el logo y el botón en línea */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y botón */
+}
+
+/* Responsive: mostrar botón en móvil */
 @media (max-width: 768px) {
-  .header {
-    height: 70px;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
   .menu-toggle {
-    display: block !important;
-    align-self: center;
-    margin-right: 5px;
+    display: flex;
   }
 
   .main-nav {
@@ -134,12 +149,7 @@ display: none;
     padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
-.logo-container {
-    flex: 1;                 /* permite alinear junto al botón */
-  }
-  .header-content {
-    padding: 0 15px;         /* espacio interno del contenedor */
-  }
+
   .main-nav.open {
     display: flex;
   }
@@ -152,25 +162,8 @@ display: none;
   .nav-item {
     margin: 10px 0;
   }
-
-  .logo-img {
-    height: 50px;
-  }
-   .main-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    padding: 15px 0;
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
 }
+
 
 
 /* Compensar el header fijo */
