@@ -52,7 +52,7 @@ body {
   align-items: center;       /* centra verticalmente */
   justify-content: space-between; /* separa elementos a los extremos */
   padding: 0 20px;           /* espacio a los lados, opcional */
-  width: 250px;              /* ancho fijo o ajustable al tamaño deseado */
+  width: 350px;              /* ancho fijo o ajustable al tamaño deseado */
 }
 .menu-toggle {
   font-size: 28px;
