@@ -639,13 +639,13 @@ h1 {
     position: absolute;
     bottom: 30px;
     background-color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
+    border-radius: 20px;
+    padding: 6px 12px;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .badge {
@@ -658,14 +658,16 @@ h1 {
 
 .badge-icon,
 .right-badge-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: #e52630;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    font-size: 14px;
+
 }
 
 .right-badge-icon {
@@ -688,12 +690,12 @@ h1 {
 .badge-title {
     color: #b01a1d;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .badge-subtitle {
     color: #666;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .right-badge-text {
@@ -707,19 +709,20 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border-radius: 50px;
-    padding: 15px 40px;
+    border-radius: 30px;
+    padding: 10px 20px;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: max-content;
     max-width: 90%;
      display: block;
+     font-size: 14px;
 }
 
 .center-badge-title {
      color: #6e6d6d;
-    font-size: 24px;
+     font-size: 16px;
     line-height: 1.5;
     white-space: nowrap;
 }
@@ -791,66 +794,106 @@ h1 {
     transition: all 0.3s ease;
   }
 
-
 @media (max-width: 600px) {
-  .header-seguridad h1 {
-    font-size: 36px;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
   }
 
-  .header-seguridad .subtitle {
-    font-size: 14px;
+  .grid-item {
+    aspect-ratio: 1 / 1;
+    width: 100%;
   }
 
-  .badge,
-  .right-badge {
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    text-align: center;
+  /* Posicionar las imágenes */
+  .grid-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
   }
 
-  .badge-text,
-  .right-badge-text {
-    margin: 0;
+  .grid-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
   }
 
-  .badge-icon,
-  .right-badge-icon {
-    margin: 0 0 5px 0;
+  .grid-item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
   }
 
-  .center-badge-title {
-    font-size: 18px;
+  .grid-item:nth-child(4) {
+    grid-column: 2;
+    grid-row: 3;
   }
 
-  .center-badge-sub,
-  .center-badge-subtitle {
-    font-size: 16px;
+  /* Texto central (center-badge) */
+  .center-badge {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    width: 90%;
+    z-index: 1;
   }
 }
+
 @media (max-width: 768px) {
-    .grid-container {
-      display: flex;
-        flex-direction: column;
-    }
-    
-    .grid-item {
-        aspect-ratio: 16/9; /* Vuelve a 16:9 en móviles */
-    }
-    
-    .center-badge {
-      position: static;
-        order: -1; /* Lo coloca al principio */
-        transform: none;
-        margin: 0 auto 30px auto;
-        width: 90%;
-        max-width: 500px;
+  .badge, .right-badge {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: auto !important;
+    padding: 10px !important;
+    margin: 0 auto !important;
+    background: white !important; /* para que el fondo se vea bien */
+    border-radius: 10px !important; /* si tenías bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important; /* para el efecto de sombra */
+  }
+  .badge-text, .right-badge-text {
+    width: 100% !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+  .badge-title, .badge-subtitle, .right-badge-text span {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+   .grid-container > .grid-item:nth-child(2) .right-badge {
+    width: auto !important;
+    padding: 10px !important;
+    margin: 0 auto 0 10px !important; /* margen arriba, derecha, abajo, izquierda */
+    background: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: 10px !important;
+  }
+  .grid-container > .grid-item:nth-child(2) .right-badge-text {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    margin: 0 !important;
+  }
 
-    }
-    .center-badge-title {
-        white-space: normal;
-    }
+  .grid-container > .grid-item:nth-child(2) .right-badge-text span {
+    display: block !important;
+    margin: 0 auto !important;
+  }
 }
+
 
 @media (max-width: 480px) {
     .grid-item {
@@ -1007,39 +1050,60 @@ h1 {
 }
 
 /* Sección CERTIFICACIONES */
+
+/* Contenedor general */
 .full-screen-container {
+    padding: 0;
+    margin: 0;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    box-sizing: border-box; /* importante */
-    padding: 0 10px; /* espacio lateral mínimo */
 }
 
+/* Imagen base - ocultamos por defecto */
 .full-screen-image {
     width: 100%;
-    max-width: 100%;  /* que no se pase del 100% del contenedor */
     height: auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: none; /* Importante: ocultamos por defecto */
+}
+
+/* Imagen para escritorio */
+.desktop-image {
     display: block;
-    object-fit: contain;
-    object-position: center;
-    margin: 0 auto; /* centrar imagen si no ocupa 100% */
 }
 
-/* Para pantallas pequeñas */
+/* Imagen para móvil */
+.mobile-image {
+    display: none;
+}
+
+/* Cuando es pantalla pequeña (móvil) */
 @media (max-width: 480px) {
-    .full-screen-image {
-        max-width: 90%; /* reduce el tamaño de la imagen al 90% */
+    .desktop-image {
+        display: none !important;
+    }
+
+    .mobile-image {
+        display: block !important;
+        width: 110%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+         max-width: none;
+        margin-left: -5%;
     }
 }
 
+/* Extra para móviles muy pequeños */
 @media (max-width: 360px) {
-    .full-screen-image {
-        max-width: 85%; /* aún más pequeña para móviles muy pequeños */
+    .mobile-image {
+        max-width: 100%; /* ya es 100%, pero puedes ajustar si hace falta */
     }
 }
-
 /* Sección MIEMBROS ACTIVOS */
 .contenedor-imagen {
     max-width: 100%;
@@ -1889,7 +1953,7 @@ background-color: #c00;
 
 /* Texto */
 .bloque-informativo {
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .titulo-principal {
@@ -2374,7 +2438,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 60px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 200;
     letter-spacing: 0.1px;
