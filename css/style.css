@@ -178,7 +178,7 @@ body {
     z-index: 2;
 }
 .custom-size {
-    width: 1000px;
+    width: 1450px;
     height: auto;
     max-width: none;
 }
@@ -186,7 +186,7 @@ body {
 /* Lado izquierdo (texto) */
 .content {
     width: 50%;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 3rem;
     box-sizing: border-box;
@@ -240,18 +240,18 @@ h1 {
 
 /* Lado derecho (imagen grande) */
 .right-content {
-    width: 50%;
+    width: 60%;
     height: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 2rem;
+   
 }
 
 .full-screen-image {
-       width: 1000px;
+       width: 1200px;
     height: auto; /* o pon una altura si quieres */
     max-width: none;
     
