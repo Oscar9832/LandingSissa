@@ -43,7 +43,7 @@ body {
 .logo-img {
   height: 50px;
   width: auto;
-  border: 1px solid blue;
+ 
 }
 
 .logo:hover {
@@ -125,7 +125,7 @@ body {
   width: 40px;
   height: 40px;
   padding: 0;
-  border: 1px solid red;
+
 }
 
 /* Agrupa el logo y el botón en línea */
@@ -640,6 +640,7 @@ body {
   }
 
   .bottom-text {
+    font-family: 'Montserrat', Arial, sans-serif;
     text-align: center;
     padding: 0 10px;
   }
@@ -1128,8 +1129,9 @@ body {
 
 /* Sección de texto */
 .contenido-texto {
-  width: 60%;
-  padding-right: 20px;
+
+  width: 50%;
+  padding-right: 10px;
 }
 
 /* Sección de imágenes */
@@ -1167,11 +1169,12 @@ h1 span {
 /* Lista de beneficios */
 .lista-beneficios {
   font-family: 'Montserrat', Arial, sans-serif;
-  list-style: none;
+  
   padding: 0;
 }
 
 .lista-beneficios li {
+  font-family: 'Montserrat', Arial, sans-serif;
   margin-bottom: 10px;
   font-size: 1.1em;
 }
