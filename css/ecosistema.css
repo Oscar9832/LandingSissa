@@ -14,21 +14,24 @@ body {
 }
 
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
   width: 100%;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
   
 }
 
 .header-content {
- display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  padding: 0 20px;
-  max-width: 1100px;
-  margin: 0 auto; 
+  padding: 0 10px; /* opcional: algo de espacio interno */
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Logo */
@@ -132,6 +135,11 @@ body {
   gap: 10px; /* espacio entre logo y botón */
 }
 
+.nav-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
 /* Responsive: mostrar botón en móvil */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -141,13 +149,16 @@ body {
   .main-nav {
     display: none;
     flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
     width: 100%;
     background-color: #fff;
     position: absolute;
     top: 70px;
     left: 0;
-    padding: 15px 0;
+    padding: 20px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
   }
 
   .main-nav.open {
@@ -155,15 +166,34 @@ body {
   }
 
   .nav-list {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .nav-item {
     margin: 10px 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+   .container {
+    padding: 0; /* ✅ Elimina espacios laterales */
+  }
+
+  .logo-menu-container {
+    padding: 0 10px; /* Opcional: margen interno mínimo solo para logo y botón */
   }
 }
-
 
 
 /* Compensar el header fijo */
@@ -565,14 +595,13 @@ body {
   flex-direction: column;
   align-items: center;
 
-  min-width: 500px;
+ 
 }
 
 .cylinder-img {
   margin-top: -50px;
   /* Súbela más cambiando este valor */
 }
-
 
 @media (max-width: 768px) {
   .container {
@@ -584,21 +613,30 @@ body {
 
   .left-content {
     margin-bottom: 30px;
-    /* Espacio entre el texto y la imagen */
     width: 100%;
+    text-align: center;
+  }
+
+  .left-content .text,
+  .left-content .highlight-red,
+  .left-content .highlight-red2,
+  .left-content .text-small {
+    text-align: center;
   }
 
   .right-content {
     margin-top: 0 !important;
-    /* Asegura que no haya desplazamiento */
-    min-width: 0;
-    width: 100%;
+    min-width: 0 !important;
+    width: 100% !important;
     align-items: center;
   }
 
-  .right-content img {
-    max-width: 100%;
+  .cylinder-img {
+    width: 100%;
+    max-width: 350px; /* Aumenta este valor si quieres más grande */
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .bottom-text {
@@ -606,6 +644,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 /*base de seguridad con fondo*/
 .contenedor-fondo {
@@ -684,6 +723,7 @@ body {
   min-height: 70px;
   margin-left: -30px;
   z-index: 2;
+  text-align: center;
 }
 
 .badge-icon,
@@ -788,6 +828,126 @@ body {
   max-width: 1300px;
 }
 
+.wrapper-principal {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.logo-mobile {
+  display: none; /* Oculto por defecto (para escritorio) */
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.logo-mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caja-destacada {
+  background-color: #8B0000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+/* Mostrar solo en pantallas menores a 768px (móviles) */
+@media screen and (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+  }
+}
+
+
+/* Estilo del contenedor */
+.seguridad-box {
+  border: 2px solid #8B0000;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Encabezado */
+.seguridad-header {
+  background-color: #8B0000;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.seguridad-header .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.seguridad-header .triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+/* Contenido oculto */
+.seguridad-content {
+  display: none;
+  padding: 15px;
+  background-color: white;
+  color: #333;
+}
+
+.seguridad-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.seguridad-content li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.seguridad-content li::before {
+  content: "■";
+  color: #8B0000;
+  position: absolute;
+  left: 0;
+}
+
+.seguridad-content h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #900; /* rojo oscuro para que combine con el tema */
+}
+.seguridad-content p {
+  margin: 0 0 10px 15px;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* Ocultar en pantallas grandes */
+@media (min-width: 768px) {
+  .seguridad-box {
+    display: none;
+  }
+}
+
+
 @media (max-width: 768px) {
   .contenedor-fondo {
     justify-content: center;
@@ -798,6 +958,25 @@ body {
   }
 }
 
+
+/*imagenes en el movil solamente*/
+
+/* Oculta por defecto (escritorio) */
+.solo-movil {
+  display: none;
+}
+
+/* Muestra solo en pantallas móviles */
+@media (max-width: 768px) {
+  .solo-movil {
+    display: block;
+    width: 100%; /* o ajusta como necesites */
+    max-width: 100%;
+    height: auto;
+    margin: 0; /* centrado con espacio */
+    padding: 0;
+  }
+}
 .container-piso {
   display: flex;
   align-items: flex-start;
@@ -1110,7 +1289,7 @@ h1 span {
     margin: 0;
   }
 
-  .whatsapp-button {
+ .whatsapp-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1122,7 +1301,7 @@ h1 span {
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
-    margin-bottom: 20px;
+    margin: 0 auto 20px; /* Centrado horizontal y espacio abajo */
   }
 
   .whatsapp-button i {
@@ -1437,6 +1616,11 @@ h1 span {
     .full-screen-image {
         max-width: 85%; /* aún más pequeña para móviles muy pequeños */
     }
+}
+@media (max-width: 767px) {
+  .full-screen-container {
+    display: none;
+  }
 }
 
 .whatsapp-button {
